@@ -1,7 +1,7 @@
 # EnvironmentSetup
 
 ## 程式語言
-  - [ ] Python
+  - [ ] [Python](https://github.com/yuning-lin/EnvironmentSetup/tree/main/Python)
 
 ## 熱門 IDE
   - [ ] Eclipse
