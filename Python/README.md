@@ -28,7 +28,13 @@ windows 若為 32 位元的選擇「Windows x86 executable installer」
 一般來說會希望不同專案的環境是分開來的  
 除了方便管理外，協作的人也可以快速套用  
 下面就來示範如何在「命令提示字元」建立虛擬環境
-
+指令|意義
+----|----
+which python | 預設的 python 是哪個
+where python | python 的路徑在哪裡
+virtualenv --python "python path" env3.9 | 建立叫 env3.9 的虛擬環境（建議取有意義的名字）
+source ./env3.9/Scripts/activate | 啟動虛擬環境
+deactivate | 關閉虛擬環境
 ## 快速上手
 初學者建議根據要使用的套件自行個別安裝  
 可以更了解每個套件的使用方式  
