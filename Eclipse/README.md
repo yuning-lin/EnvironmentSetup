@@ -38,4 +38,9 @@ python 本身也有 IDE 只是有點陽春...
       
 4. 安裝套件： Window > Preferences＞左方列表點選 PyDev > Interpreters > Python Interpreter＞點選指定的 python 環境＞ manage with pip ＞ 輸入欲安裝的套件  
     
-    ![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/manage_with_pip.PNG)![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/install_pkg.PNG)
+    ![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/manage_with_pip.PNG)![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/install_pkg.PNG)  
+  
+## 參考網址
+[基礎教學 PDF](https://www.cs.ccu.edu.tw/~naiwei/cs5812/Eclipse-IDE.pdf)  
+[基礎教學 WEB](http://tw.gitbook.net/eclipse.html)  
+  
