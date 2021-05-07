@@ -30,11 +30,15 @@ windows 若為 32 位元的選擇「Windows x86 executable installer」
 下面就來示範如何在「命令提示字元」建立虛擬環境
 指令|意義
 ----|----
-which python | 預設的 python 是哪個
+cd path | 到某路徑
 where python | python 的路徑在哪裡
 virtualenv --python "python path" env3.9 | 建立叫 env3.9 的虛擬環境（建議取有意義的名字）
-source ./env3.9/Scripts/activate | 啟動虛擬環境
-deactivate | 關閉虛擬環境
+env3.9/Scripts/activate | 啟動虛擬環境
+pip install 套件 | 安裝套件
+deactivate | 關閉虛擬環境  
+  
+![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/create_virtualenv.PNG)  
+
 ## 快速上手
 初學者建議根據要使用的套件自行個別安裝  
 可以更了解每個套件的使用方式  
