@@ -20,9 +20,22 @@ python 本身也有 IDE 只是有點陽春...
 
 ## 開始使用
 1. 進入 IDE 介面：於介面上方點選 Window > Perspective > Open Perspective > Other…＞點選 PyDev
-![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/enter_eclipse_interface1.png)![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/enter_eclipse_interface2.png)
+  
+    ![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/enter_eclipse_interface1.png)![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/enter_eclipse_interface2.png)  
+  
 2. 選定 python 環境：於介面上方點選 Window > Preferences＞左方列表點選 PyDev > Interpreters > Python Interpreter
     * 使用預設 python 環境：選右方 Config first in PATH，出現 Python，在點選下方 Apply and Close
-    ![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/choose_python_env.png)
-    * 使用客製虛擬環境：
-3. 調整編碼：
+      
+    ![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/choose_python_env.png)  
+      
+    * 使用客製虛擬環境：選右方 Browse for python/pypy exe，出現 Python，在點選下方 Apply and Close
+      
+    ![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/choose_python_env2.png)  
+      
+3. 調整編碼：於介面上方點選 Window ＞ Preferences ＞ General ＞ Editors ＞ Workspace ＞ UTF-8  
+     
+    ![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/change_encoding.png)
+      
+4. 安裝套件： Window > Preferences＞左方列表點選 PyDev > Interpreters > Python Interpreter＞點選指定的 python 環境＞ manage with pip ＞ 輸入欲安裝的套件  
+    
+    ![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/manage_with_pip.PNG)![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/install_pkg.PNG)
