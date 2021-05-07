@@ -20,5 +20,9 @@ python 本身也有 IDE 只是有點陽春...
 
 ## 開始使用
 1. 進入 IDE 介面：於介面上方點選 Window > Perspective > Open Perspective > Other…＞點選 PyDev
+![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/enter_eclipse_interface1.png)![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/enter_eclipse_interface2.png)
 2. 選定 python 環境：於介面上方點選 Window > Preferences＞左方列表點選 PyDev > Interpreters > Python Interpreter
-  * 選
+    * 使用預設 python 環境：選右方 Config first in PATH，出現 Python，在點選下方 Apply and Close
+    ![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/choose_python_env.png)
+    * 使用客製虛擬環境：
+3. 調整編碼：
