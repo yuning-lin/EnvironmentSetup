@@ -1,5 +1,5 @@
 ## 開始安裝
- [官方連結](https://www.python.org/downloads/)   
+ [Python 官方下載連結](https://www.python.org/downloads/)   
 python 主要有兩代，python2、python3  
 個人主要都使用 python3 居多，故下列示範為安裝 python3   
 於「Looking for a specific release?」可以下載指定版本的 python，EX：[3.7.9](https://www.python.org/downloads/release/python-379/)  
