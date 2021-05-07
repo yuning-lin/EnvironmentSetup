@@ -18,7 +18,7 @@ python 本身也有 IDE 只是有點陽春...
   
 ![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/install_pydev.png)![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/optional_columns.png)
 
-## 開始使用
+## 軟體設置
 1. 進入 IDE 介面：於介面上方點選 Window > Perspective > Open Perspective > Other…＞點選 PyDev
   
     ![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/enter_eclipse_interface1.png)![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/enter_eclipse_interface2.png)  
@@ -39,6 +39,11 @@ python 本身也有 IDE 只是有點陽春...
 4. 安裝套件： Window > Preferences＞左方列表點選 PyDev > Interpreters > Python Interpreter＞點選指定的 python 環境＞ manage with pip ＞ 輸入欲安裝的套件  
     
     ![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/manage_with_pip.PNG)![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/install_pkg.PNG)  
+    
+## 新增專案
+跟著做到這裡就可以開始新的專案囉～
+建立專案：於介面上方點選 File ＞ New ＞ PyDev Project ＞ 輸入專案名稱、點選 python 環境 ＞ Finish 
+建立新檔：
   
 ## 參考網址
 [基礎教學 PDF](https://www.cs.ccu.edu.tw/~naiwei/cs5812/Eclipse-IDE.pdf)  
