@@ -54,7 +54,6 @@ python 本身也有 IDE 只是有點陽春...
   
 ![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/debug_mode.PNG)  
   
-  
 ## 參考網址
 [基礎教學 PDF](https://www.cs.ccu.edu.tw/~naiwei/cs5812/Eclipse-IDE.pdf)  
 [基礎教學 WEB](http://tw.gitbook.net/eclipse.html)  
