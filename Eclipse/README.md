@@ -28,7 +28,7 @@ python 本身也有 IDE 只是有點陽春...
       
     ![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/choose_python_env.png)  
       
-    * 使用客製虛擬環境：選右方 Browse for python/pypy exe，出現 Python，在點選下方 Apply and Close
+    * 使用客製虛擬環境：用 [CMD 創建虛擬環境](https://github.com/yuning-lin/EnvironmentSetup/tree/main/Python#%E8%99%9B%E6%93%AC%E7%92%B0%E5%A2%83)後，選右方 Browse for python/pypy exe，出現 python.exe，在點選下方 Apply and Close
       
     ![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/choose_python_env2.png)  
       
@@ -40,10 +40,20 @@ python 本身也有 IDE 只是有點陽春...
     
     ![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/manage_with_pip.PNG)![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/install_pkg.PNG)  
     
-## 新增專案
-跟著做到這裡就可以開始新的專案囉～
-建立專案：於介面上方點選 File ＞ New ＞ PyDev Project ＞ 輸入專案名稱、點選 python 環境 ＞ Finish 
-建立新檔：
+## 新手上路
+跟著做到這裡就可以開始新的專案囉～  
+建立專案：於介面上方點選 File ＞ New ＞ PyDev Project ＞ 輸入專案名稱、點選 python 環境 ＞ Finish  
+  
+![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/create_new_project.PNG)  
+  
+建立新檔：於專案名點右鍵 ＞ New ＞ PyDev Module ＞ 輸入檔名 ＞ Finish  
+  
+![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/create_new_py.png)  
+  
+除錯模式：於欲除錯的行數旁邊雙擊，出現小綠點 ＞ 點擊小蟲 ＞ 進入除錯模式  
+  
+![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/debug_mode.PNG)  
+  
   
 ## 參考網址
 [基礎教學 PDF](https://www.cs.ccu.edu.tw/~naiwei/cs5812/Eclipse-IDE.pdf)  
