@@ -9,7 +9,7 @@
   - [ ] VSCode
 
 ## 版本控制
-  - [ ] Git
+  - [x] [Git](https://github.com/yuning-lin/EnvironmentSetup/tree/main/Git)
 
 ## 資料庫
   - [x] [SQLite](https://github.com/yuning-lin/EnvironmentSetup/tree/main/SQLite)
