@@ -12,18 +12,18 @@ python 本身也有 IDE 只是有點陽春...
 ## 開始安裝
 1. [JAVA 官方下載連結](https://github.com/ojdkbuild/ojdkbuild/blob/master/README.md)（需先安裝 JAVA 才能安裝 Eclipse）  
 2. [Eclipse 官方下載連結](https://www.eclipse.org/downloads/)（windows 根據位元選擇下載版本，EX：64 位元下載檔名為 x86_64.msi 結尾）  
-3. 點選 eclipse-inst-win64.exe＞選擇「Eclipse IDE for Eclipse Committers」＞INSTALL＞ACCEPT＞LAUNCH
+3. 點選 eclipse-inst-win64.exe ＞ 選擇「Eclipse IDE for Eclipse Committers」＞ INSTALL ＞ ACCEPT ＞ LAUNCH
 4. 設定工作空間：選取個人工作空間路徑＞LAUNCH
-5. 安裝 PyDev：Help > Install New Software...＞點選 Add...＞視窗中 Name 輸入「pydev」，Location 輸入「http://www.pydev.org/updates」 ＞勾選欲安裝欄位＞Next＞Accept  
+5. 安裝 PyDev：Help > Install New Software...＞ 點選 Add...＞ 視窗中 Name 輸入「pydev」，Location 輸入「http://www.pydev.org/updates」 ＞ 勾選欲安裝欄位 ＞ Next ＞ Accept  
   
 ![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/install_pydev.png)![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/optional_columns.png)
 
 ## 軟體設置
-1. 進入 IDE 介面：於介面上方點選 Window > Perspective > Open Perspective > Other…＞點選 PyDev
+1. 進入 IDE 介面：於介面上方點選 Window ＞ Perspective ＞ Open Perspective ＞ Other… ＞ 點選 PyDev
   
     ![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/enter_eclipse_interface1.png)![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/enter_eclipse_interface2.png)  
   
-2. 選定 python 環境：於介面上方點選 Window > Preferences＞左方列表點選 PyDev > Interpreters > Python Interpreter
+2. 選定 python 環境：於介面上方點選 Window ＞ Preferences ＞ 左方列表點選 PyDev ＞ Interpreters ＞ Python Interpreter
     * 使用預設 python 環境：選右方 Config first in PATH，出現 Python，在點選下方 Apply and Close
       
     ![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/choose_python_env.png)  
@@ -36,7 +36,7 @@ python 本身也有 IDE 只是有點陽春...
      
     ![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/change_encoding.png)
       
-4. 安裝套件： Window > Preferences＞左方列表點選 PyDev > Interpreters > Python Interpreter＞點選指定的 python 環境＞ manage with pip ＞ 輸入欲安裝的套件  
+4. 安裝套件：於介面上方點選 Window ＞ Preferences ＞ 左方列表點選 PyDev ＞ Interpreters ＞ Python Interpreter ＞ 點選指定的 python 環境 ＞ manage with pip ＞ 輸入欲安裝的套件  
     
     ![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/manage_with_pip.PNG)![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/install_pkg.PNG)  
     
@@ -50,7 +50,8 @@ python 本身也有 IDE 只是有點陽春...
   
 ![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/create_new_py.png)  
   
-除錯模式：於欲除錯的行數旁邊雙擊，出現小綠點 ＞ 點擊小蟲 ＞ 進入除錯模式  
+除錯模式：於欲除錯的行數旁邊雙擊，出現小綠點 ＞ 點擊小蟲 ＞ 進入除錯模式［圖片螢光筆圖示］  
+除錯顯示：於介面上方點選 Window ＞ Show View ＞ Other ＞ Debug ＞ Debug［可以執行多個 DEBUG 程序顯示於左列］
   
 ![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/debug_mode.PNG)  
   
