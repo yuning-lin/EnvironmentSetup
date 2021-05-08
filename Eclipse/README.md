@@ -3,7 +3,7 @@ IDE（Integrated Development Environment），可中譯為整合開發環境
 顧名思義就是將多種在程式開發會應用到的工具整合在一起  
 python 本身也有 IDE 只是有點陽春...  
 坊間現在已經有很多免費且好用的 IDE  
-選一個順手的對於新手來說更是事半功倍
+選一個順手的對於新手來說更是事半功倍  
 這邊介紹一個歷史算頗久的 IDE  
 不僅可以拿來編輯 python 還可以拿來編輯 JAVA  
 個人覺得他 DEBUG 的功能蠻強大的  
@@ -32,7 +32,7 @@ python 本身也有 IDE 只是有點陽春...
       
     ![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/choose_python_env2.png)  
       
-3. 調整編碼：於介面上方點選 Window ＞ Preferences ＞ General ＞ Editors ＞ Workspace ＞ UTF-8  
+3. 調整編碼：於介面上方點選 Window ＞ Preferences ＞ 打關鍵字 en ＞ General ＞ Editors ＞ Workspace ＞ UTF-8  
      
     ![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/change_encoding.PNG)
       
