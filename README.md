@@ -2,6 +2,7 @@
 
 ## 程式語言
   - [x] [Python](https://github.com/yuning-lin/EnvironmentSetup/tree/main/Python)
+  - [ ] MarkDown
 
 ## 熱門 IDE
   - [x] [Eclipse](https://github.com/yuning-lin/EnvironmentSetup/tree/main/Eclipse)
@@ -11,5 +12,5 @@
   - [ ] Git
 
 ## 資料庫
-  - [ ] SQLite
+  - [x] [SQLite](https://github.com/yuning-lin/EnvironmentSetup/tree/main/SQLite)
   - [ ] MongoDB
