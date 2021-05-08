@@ -26,7 +26,7 @@ python 本身也有 IDE 只是有點陽春...
 2. 選定 python 環境：於介面上方點選 Window ＞ Preferences ＞ 左方列表點選 PyDev ＞ Interpreters ＞ Python Interpreter
     * 使用預設 python 環境：選右方 Config first in PATH，出現 Python，在點選下方 Apply and Close
       
-    ![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/choose_python_env.png)  
+    ![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/choose_python_env.PNG)  
       
     * 使用客製虛擬環境：用 [CMD 創建虛擬環境](https://github.com/yuning-lin/EnvironmentSetup/tree/main/Python#%E8%99%9B%E6%93%AC%E7%92%B0%E5%A2%83)後，選右方 Browse for python/pypy exe，出現 python.exe，在點選下方 Apply and Close
       
@@ -34,7 +34,7 @@ python 本身也有 IDE 只是有點陽春...
       
 3. 調整編碼：於介面上方點選 Window ＞ Preferences ＞ General ＞ Editors ＞ Workspace ＞ UTF-8  
      
-    ![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/change_encoding.png)
+    ![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/change_encoding.PNG)
       
 4. 安裝套件：於介面上方點選 Window ＞ Preferences ＞ 左方列表點選 PyDev ＞ Interpreters ＞ Python Interpreter ＞ 點選指定的 python 環境 ＞ manage with pip ＞ 輸入欲安裝的套件  
     
