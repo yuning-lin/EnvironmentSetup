@@ -32,10 +32,20 @@
   
 ![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/mysql_windows_service.PNG)  
   
-最後按 execute，router configuration 可以不必打勾，初始有根帳密即可，基本上就完成了安裝囉～  
+最後按 execute，router configuration 可以不必打勾，初始有根帳密即可  
   
 ![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/mysql_apply_configuration.PNG)  
   
-![]()
+![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/mysql_router_configuration.PNG)
   
-最後輸入根密碼按 check 後執行
+輸入根密碼按 check 後執行，看到 installation complete，基本上就完成了安裝囉～  
+根據使用習慣勾選要開啟的介面，這邊我選 Workbench  
+
+![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/mysql_connect_to_server.PNG)
+
+點選 localhost 方框輸入根密碼即可進入使用畫面如圖示  
+  
+![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/mysql_start_workbench.PNG)
+
+![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/workbench_user_interface.PNG)  
+
