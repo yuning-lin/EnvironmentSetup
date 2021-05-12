@@ -32,8 +32,10 @@
   
 ![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/mysql_windows_service.PNG)  
   
-最後按 execute 就完成了安裝囉～  
+最後按 execute，router configuration 可以不必打勾，初始有根帳密即可，基本上就完成了安裝囉～  
   
 ![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/mysql_apply_configuration.PNG)  
-
+  
 ![]()
+  
+最後輸入根密碼按 check 後執行
