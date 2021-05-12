@@ -39,7 +39,7 @@
 ![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/mysql_router_configuration.PNG)
   
 輸入根密碼按 check 後執行，看到 installation complete，基本上就完成了安裝囉～  
-根據使用習慣勾選要開啟的介面，這邊我選 Workbench  
+根據使用習慣勾選要開啟的介面，這邊我選 Workbench（可以不用另外再下載圖型化界面）  
 
 ![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/mysql_connect_to_server.PNG)
 
