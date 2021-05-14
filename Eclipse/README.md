@@ -12,7 +12,10 @@ python 本身也有 IDE 只是有點陽春...
 ## 開始安裝
 1. [JAVA 官方下載連結](https://github.com/ojdkbuild/ojdkbuild/blob/master/README.md)（需先安裝 JAVA 才能安裝 Eclipse）  
 2. [Eclipse 官方下載連結](https://www.eclipse.org/downloads/)（windows 根據位元選擇下載版本，EX：64 位元下載檔名為 x86_64.msi 結尾）  
-3. 點選 eclipse-inst-win64.exe ＞ 選擇「Eclipse IDE for Eclipse Committers」＞ INSTALL ＞ ACCEPT ＞ LAUNCH
+3. 點選 eclipse-inst-win64.exe ＞ 選擇「Eclipse IDE for Eclipse Committers」＞ INSTALL ＞ ACCEPT ＞ LAUNCH  
+  
+![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/eclipse_committers.PNG)  
+  
 4. 設定工作空間：選取個人工作空間路徑＞LAUNCH
 5. 安裝 PyDev：Help > Install New Software...＞ 點選 Add...＞ 視窗中 Name 輸入「pydev」，Location 輸入「http://www.pydev.org/updates」 ＞ 勾選欲安裝欄位 ＞ Next ＞ Accept  
   
@@ -55,6 +58,15 @@ python 本身也有 IDE 只是有點陽春...
   
 ![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/debug_mode.PNG)  
   
+## 解除安裝
+知道怎麼安裝，也得知道怎麼解除安裝  
+有幾次出了問題無解就是靠重新安裝才恢復 IDE 正常使用  
+參照以下刪除步驟即可解除安裝  
+1. 開始 ＞ 找到 eclipse 後右鍵開啟檔案位置 ＞ 至上層刪掉整個 eclipse 的資料夾
+2. 開始 ＞ 找到 eclipse 後右鍵刪除
+3. 桌面 ＞ 刪除 eclipse 捷徑
+4. C:\Users\User_name\ ＞ 刪除 .p2 資料夾並刪除帶有 eclipse 的所有資料夾
+
 ## 參考網址
 [基礎教學 PDF](https://www.cs.ccu.edu.tw/~naiwei/cs5812/Eclipse-IDE.pdf)  
 [基礎教學 WEB](http://tw.gitbook.net/eclipse.html)  
