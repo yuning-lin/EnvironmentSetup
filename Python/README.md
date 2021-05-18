@@ -44,5 +44,5 @@ deactivate | 關閉虛擬環境
 可以更了解每個套件的使用方式  
 不過如果需要快速建立普遍都會使用到的套件模組們可以下載 [Anaconda](https://docs.anaconda.com/anaconda/install/windows/)  
 連結裡就有官方安裝教學
-但是就切分專案不同版本套件上可能會比較麻煩，還是不建議初學者使用
-程式碼入手可參閱： [AboutPython](https://github.com/yuning-lin/AboutPython)
+但是就切分專案不同版本套件上可能會比較麻煩，還是不建議初學者使用  
+程式碼入手可參閱： [AboutPython](https://github.com/yuning-lin/AboutPython)  
