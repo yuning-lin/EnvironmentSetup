@@ -13,4 +13,5 @@
 
 ## 資料庫
   - [x] [SQLite](https://github.com/yuning-lin/EnvironmentSetup/tree/main/SQLite#readme)
+  - [x] [MySQL](https://github.com/yuning-lin/EnvironmentSetup/tree/main/MySQL#readme)
   - [ ] MongoDB
