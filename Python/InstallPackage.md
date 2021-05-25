@@ -10,6 +10,7 @@
 意義|指令
 ----|----
 安裝指定版本套件|`pip install wheel==0.34.1`
+強制降級套件版本|`pip install --force-reinstall wheel==0.34.1`
 升級套件|`pip install --upgrade wheel`
 卸載套件|`pip uninstall wheel`
 列出所有套件及版本|`pip list`
