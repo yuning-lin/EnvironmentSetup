@@ -17,6 +17,15 @@
 將套件打包成文件|`pip freeze > 文件名（如 requirements.txt）`
 打包成文件的套件一次安裝|`pip install -r requirements.txt`
 打包成文件的套件一次卸載|`pip uninstall -r requirements.txt`
+  
+### pip 問題錦集
+* 若是升級 pip 後，遇到 `No module named pip` 而無法使用 pip
+  * `python -m ensurepip`
+* 在安裝套件遇到 `Consider using the --user option or check the permissions.`
+  * `pip install --user wheel`
+* 在安裝套件遇到 `ERROR: Command errored out with exit status 1: python setup.py egg_info Check the logs for full command output.`
+  * `pip install --upgrade setuptools`
+  * `pip install --upgrade pip`
 
 ## 手動安裝
 若使用 pip 失敗，再嘗試用手動安裝  
