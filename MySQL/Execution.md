@@ -19,3 +19,5 @@ pip install sqlalchemy-utils # 確認 DB 是否存在等的套包
 pip install cymysql # INSERT 中文編碼才不會出問題（預設的 mysqldb 只單純 INSERT 英文資料沒問題）
 ```
 
+## 範例程式
+* [sqlalchemy](https://github.com/yuning-lin/EnvironmentSetup/blob/main/MySQL/MySQL_sqlalchemy.ipynb)
