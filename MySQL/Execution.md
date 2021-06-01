@@ -1,3 +1,9 @@
+## 如何執行 MySQL
+* 透過黑窗 MySQL Command Line Client 執行
+* 透過圖示介面如 Workbench、HeidiSQL 執行
+* 透過 python 或其他程式語言間接執行
+
+>**本文件主軸為如何用 python 連結資料庫並存取資料**
 ## 套件：sqlalchemy
 ### ORM 簡介
 ORM 物件關聯對映（Object Relational Mapping）  
