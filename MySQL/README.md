@@ -49,3 +49,6 @@
 
 ![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/workbench_user_interface.PNG)  
 
+## 其他圖型化界面
+* [HeidiSQL](https://www.heidisql.com/download.php?download=installer)
+  * 按預設安裝即可，安裝完後需重開機
