@@ -7,6 +7,7 @@
 ## 熱門 IDE
   - [x] [Eclipse](https://github.com/yuning-lin/EnvironmentSetup/tree/main/Eclipse#readme)
   - [x] [VSCode](https://github.com/yuning-lin/EnvironmentSetup/tree/main/VisualStudioCode#readme)
+  - [x] [Jupyter Notebook](https://github.com/yuning-lin/EnvironmentSetup/tree/main/JupyterNotebook)
 
 ## 版本控制
   - [x] [Git](https://github.com/yuning-lin/EnvironmentSetup/tree/main/Git#readme)
@@ -14,4 +15,5 @@
 ## 資料庫
   - [x] [SQLite](https://github.com/yuning-lin/EnvironmentSetup/tree/main/SQLite#readme)
   - [x] [MySQL](https://github.com/yuning-lin/EnvironmentSetup/tree/main/MySQL#readme)
+  - [x] [HeidiSQL](https://github.com/yuning-lin/EnvironmentSetup/tree/main/HeidiSQL) 
   - [ ] MongoDB
