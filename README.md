@@ -17,3 +17,8 @@
   - [x] [MySQL](https://github.com/yuning-lin/EnvironmentSetup/tree/main/MySQL#readme)
   - [x] [HeidiSQL](https://github.com/yuning-lin/EnvironmentSetup/tree/main/HeidiSQL) 
   - [ ] MongoDB
+
+
+## 工作流程管理
+  - [x] [AirFlow](https://github.com/yuning-lin/EnvironmentSetup/tree/main/AirFlow)
+  - [x] [Windows Task Scheduler 工作排程器](https://github.com/yuning-lin/EnvironmentSetup/tree/main/WindowsTaskScheduler)
