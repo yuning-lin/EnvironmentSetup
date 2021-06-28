@@ -48,12 +48,45 @@ ENTER 鍵：自動生成大於符號
 `<ins>底線</ins>` |<ins>底線</ins>
 
 ## 數學公式
-用錢字號括住 Latex 語法  
-Latex 語法詳參：http://www.cs.nthu.edu.tw/~cherung/teaching/2009cs5321/link/latex.pdf
+### inline 寫法（和文字齊平）
+算式前後用單個錢字號括住 Latex 語法   
 ```
-傅立葉變換公式：$f(t)=\int_{-\infty}^\infty f(t) e^{-iwt}dt$ 
+傅立葉轉換公式：$X(j\omega)=\int_{-\infty}^\infty x(t) e^{-j\omega t}dt$ 
 ```
-傅立葉變換公式：$f(t)=\int_{-\infty}^\infty f(t) e^{-iwt}dt$ 
+傅立葉轉換公式：$X(j\omega)=\int_{-\infty}^\infty x(t) e^{-j\omega t}dt$ 
+### inline 寫法（公式置中）
+算式前後用兩個錢字號括住 Latex 語法
+```
+傅立葉轉換公式：$$X(j\omega)=\int_{-\infty}^\infty x(t) e^{-j\omega t}dt$$
+```
+傅立葉轉換公式：$$X(j\omega)=\int_{-\infty}^\infty x(t) e^{-j\omega t}dt$$
+
+### inline 寫法（多個公式置中）
+* 數學式標號：`\tag{number}`
+* 換行：`\newline`
+* 除了用兩個錢字號外，還需用：`\begin{align}`、`\end{align}` 包裹數學式
+```
+$$
+\begin{align} 
+X(j\omega)=\int_{-\infty}^\infty x(t) e^{-j\omega t}dt  \tag{1} \newline
+x(t)=\frac{1}{2\pi} \int_{-\infty}^\infty X(j\omega)e^{j\omega t}d\omega  \tag{2}
+\end{align}
+$$
+```
+$$
+\begin{align} 
+X(j\omega)=\int_{-\infty}^\infty x(t) e^{-j\omega t}dt  \tag{1} \newline
+x(t)=\frac{1}{2\pi} \int_{-\infty}^\infty X(j\omega)e^{j\omega t}d\omega  \tag{2}
+\end{align}
+$$
+
+
+
+### 參考來源
+* 若無法顯示 latex 可於 chrome 安裝[擴充套件](https://chrome.google.com/webstore/detail/tex-all-the-things/cbimabofgmfdkicghcadidpemeenbffn)
+* Latex 基礎語法可[參考](http://www.cs.nthu.edu.tw/~cherung/teaching/2009cs5321/link/latex.pdf)
+* Latex 進階語法可[參考](https://en.wikibooks.org/wiki/LaTeX/Advanced_Mathematics)
+* [Latex 官方網站](https://www.latex-project.org/)
 
 ## 清單列表
 ### 無序標號
