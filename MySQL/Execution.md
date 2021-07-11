@@ -39,3 +39,4 @@ pip install cryptography
 ## 範例程式
 * [sqlalchemy](https://github.com/yuning-lin/EnvironmentSetup/blob/main/MySQL/MySQL_sqlalchemy.ipynb)
 * [pymysql](https://github.com/yuning-lin/EnvironmentSetup/blob/main/MySQL/MySQL_pymysql.ipynb)
+* [pyodbc](https://github.com/yuning-lin/EnvironmentSetup/blob/main/MySQL/MySQL_pyodbc.ipynb)
