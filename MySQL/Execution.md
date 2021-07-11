@@ -36,6 +36,13 @@ pip install pymysql
 pip install cryptography
 ```
 
+## 套件：pyodbc
+簡化連接 ODBC（open database connectivity）databases 
+### 所需套件
+```bash
+pip install pyodbc
+```
+
 ## 範例程式
 * [sqlalchemy](https://github.com/yuning-lin/EnvironmentSetup/blob/main/MySQL/MySQL_sqlalchemy.ipynb)
 * [pymysql](https://github.com/yuning-lin/EnvironmentSetup/blob/main/MySQL/MySQL_pymysql.ipynb)
