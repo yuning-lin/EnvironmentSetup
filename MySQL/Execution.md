@@ -2,8 +2,42 @@
 * 透過黑窗 MySQL Command Line Client 執行
 * 透過圖示介面如 Workbench、HeidiSQL 執行
 * 透過 python 或其他程式語言間接執行
+>**本文件主軸為 python 連結資料庫的套件介紹**
 
->**本文件主軸為如何用 python 連結資料庫並存取資料**
+## Command Line Client
+語法|意義
+----|----
+`mysql -u your_username -h your_host_ip -p`|輸入左列語法再輸入密碼即連接 mySQL
+`show databases;`|顯示 database 目錄
+`use your_dbname;`|顯示指定 DB
+
+* 顯示指定 DB 內所有表名、資料筆數
+```mysql
+SELECT table_name, table_rows
+FROM INFORMATION_SCHEMA.TABLES
+WHERE TABLE_SCHEMA = 'your_dbname';
+```
+
+* 顯示指定表的欄位屬性
+```mysql
+SELECT 
+TABLE_CATALOG,
+TABLE_SCHEMA,
+TABLE_NAME, 
+COLUMN_NAME, 
+DATA_TYPE,
+CHARACTER_MAXIMUM_LENGTH
+FROM INFORMATION_SCHEMA.COLUMNS
+where TABLE_NAME = 'your_tablename'
+```
+
+* 刪除 DB 內所有表
+```mysql
+SELECT CONCAT('DROP TABLE IF EXISTS `', table_name, '`;')
+FROM INFORMATION_SCHEMA.TABLES
+WHERE TABLE_SCHEMA = 'your_dbname';
+```
+
 ## 套件：sqlalchemy
 ### ORM 簡介
 ORM 物件關聯對映（Object Relational Mapping）  
