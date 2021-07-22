@@ -11,12 +11,33 @@
 `show databases;`|顯示 database 目錄
 `use your_dbname;`|顯示指定 DB
 
-* 顯示指定 DB 內所有表名、資料筆數
-```mysql
-SELECT table_name, table_rows
-FROM INFORMATION_SCHEMA.TABLES
-WHERE TABLE_SCHEMA = 'your_dbname';
-```
+* 顯示指定 DB 內所有表名、資料筆數  
+
+  * 故若資料量大時對 TABLE 進行操作後可能無法立即反應實際資料筆數  
+  注意：[Columns in TABLES that represent table statistics hold cached values.](https://dev.mysql.com/doc/refman/8.0/en/information-schema-tables-table.html)  
+  ```mysql
+  SELECT table_name, table_rows
+  FROM INFORMATION_SCHEMA.TABLES
+  WHERE TABLE_SCHEMA = 'your_dbname';
+  ```
+  * 反應大 TABLE 實際資料筆數仍需透過下列語法  
+  ```mysql
+  SELECT COUNT(*) 
+  FROM your_dbname.your_table_name;
+  ```
+
+* 刪除 TABLE  
+  * 刪除 DB 內所有 TABLE
+  ```mysql
+  SELECT CONCAT('DROP TABLE IF EXISTS `', table_name, '`;')
+  FROM INFORMATION_SCHEMA.TABLES
+  WHERE TABLE_SCHEMA = 'your_dbname';
+  ```
+  * 刪除 DB 指定 TABLE
+  ```mysql
+  DROP TABLE your_dbname.your_tablename
+  ```
+
 
 * 顯示指定表的欄位屬性
 ```mysql
@@ -31,12 +52,16 @@ FROM INFORMATION_SCHEMA.COLUMNS
 where TABLE_NAME = 'your_tablename'
 ```
 
-* 刪除 DB 內所有表
+* DB 權限查詢的相關指令（實際差異需另外查詢）
 ```mysql
-SELECT CONCAT('DROP TABLE IF EXISTS `', table_name, '`;')
-FROM INFORMATION_SCHEMA.TABLES
-WHERE TABLE_SCHEMA = 'your_dbname';
+SELECT * 
+FROM information_schema.user_privileges;
 ```
+```mysql
+SELECT * 
+FROM information_schema.SCHEMA_PRIVILEGES;
+```
+
 
 ## 套件：sqlalchemy
 ### ORM 簡介
