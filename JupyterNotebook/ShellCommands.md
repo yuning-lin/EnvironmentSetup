@@ -12,5 +12,7 @@
  ---|---
  `%matplotlib notebook`|拖曳縮放 cell output 內圖形
  `%matplotlib inline`|讓圖形直接畫在 cell output
+ `%pip install package_name`|安裝套件
  `!pwd`|秀出當前程式檔路徑
  `!ls`|秀出當前程式檔案夾下所有檔案
+
