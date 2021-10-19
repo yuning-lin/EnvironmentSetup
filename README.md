@@ -16,6 +16,7 @@
   - [x] [SQLite](https://github.com/yuning-lin/EnvironmentSetup/tree/main/SQLite#readme)
   - [x] [MySQL](https://github.com/yuning-lin/EnvironmentSetup/tree/main/MySQL#readme)
   - [x] [HeidiSQL](https://github.com/yuning-lin/EnvironmentSetup/tree/main/HeidiSQL) 
+  - [x] [Oracle SQL Developer](https://github.com/yuning-lin/EnvironmentSetup/tree/main/OracleSQLDeveloper)
   - [ ] MongoDB
 
 
