@@ -87,6 +87,7 @@ $$
 * Latex 基礎語法可[參考](http://www.cs.nthu.edu.tw/~cherung/teaching/2009cs5321/link/latex.pdf)
 * Latex 進階語法可[參考](https://en.wikibooks.org/wiki/LaTeX/Advanced_Mathematics)
 * [Latex 官方網站](https://www.latex-project.org/)
+* [常用數學公式語法整理](https://blog.csdn.net/lihaoweicsdn/article/details/83895143)
 
 ## 清單列表
 ### 無序標號
