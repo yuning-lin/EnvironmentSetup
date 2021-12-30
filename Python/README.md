@@ -27,17 +27,28 @@ windows 若為 32 位元的選擇「Windows x86 executable installer」
 因為套件間會有相容性的問題  
 一般來說會希望不同專案的環境是分開來的  
 除了方便管理外，協作的人也可以快速套用  
-下面就來示範如何在「命令提示字元」建立虛擬環境
+下面就來示範如何在「命令提示字元」、「Git Bash」建立虛擬環境
+### 命令提示字元（CMD）
 指令|意義
 ----|----
 cd path | 到某路徑
 where python | python 的路徑在哪裡
-virtualenv --python "python path" env3.9 | 建立叫 env3.9 的虛擬環境（建議取有意義的名字）
+virtualenv --python "python path（路徑帶正斜線＼即可）" env3.9 | 建立叫 env3.9 的虛擬環境（建議取有意義的名字）
 env3.9/Scripts/activate | 啟動虛擬環境
 pip install 套件 | 安裝套件
 deactivate | 關閉虛擬環境  
   
 ![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/create_virtualenv.PNG)  
+
+### Git Bash
+指令|意義
+----|----
+cd path | 到某路徑
+where python | python 的路徑在哪裡
+virtualenv --python "python path（路徑需帶反斜線／才行）" env3.9 | 建立叫 env3.9 的虛擬環境（建議取有意義的名字）
+source env3.9/Scripts/activate | 啟動虛擬環境
+pip install 套件 | 安裝套件
+deactivate | 關閉虛擬環境 
 
 ## 快速上手
 初學者建議根據要使用的套件自行個別安裝  
