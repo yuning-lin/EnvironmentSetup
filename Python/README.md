@@ -29,6 +29,7 @@ windows 若為 32 位元的選擇「Windows x86 executable installer」
 除了方便管理外，協作的人也可以快速套用  
 下面就來示範如何在「命令提示字元」、「Git Bash」建立虛擬環境
 ### 命令提示字元（CMD）
+如何開啟：開始＞鍵入`命令提示字元`或`CMD`即可
 指令|意義
 ----|----
 cd path | 到某路徑
@@ -41,6 +42,7 @@ deactivate | 關閉虛擬環境
 ![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/create_virtualenv.PNG)  
 
 ### Git Bash
+如何開啟：只要安裝過 Git，在任意資料夾按右鍵＞Git Bash Here 即可開啟
 指令|意義
 ----|----
 cd path | 到某路徑
