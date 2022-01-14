@@ -38,7 +38,7 @@
   
   ![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/JupyterNotebook_debug_mode1.PNG)
    
-3. 指令範例，如圖紅框處：
+4. 指令範例，如圖紅框處：
   
    指令|意義
    ---|---
