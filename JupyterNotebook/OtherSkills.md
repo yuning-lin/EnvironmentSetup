@@ -30,3 +30,21 @@
    * 在 UI 介面的 New 即可在新虛擬環境創建 .ipynb，如圖
      
    ![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/JupyterNotebook_create_env_menu.PNG)
+
+## 如何 debug
+1. 利用套件 `pdb`、`IPython` 的 `set_trace()` 下中斷點
+2. run cell 即可進入 debug 模式，cell 也會顯示正在運行 `[*]`
+3. 搭配互動式的介面，如綠框處，建入相應的指令完成需求
+  
+  ![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/JupyterNotebook_debug_mode1.PNG)
+   
+3. 指令範例，如圖紅框處：
+  
+   指令|意義
+   ---|---
+   `n`|運行到下一行
+   `c`|運行後續所有程式
+   `h`|叫出指令表
+   
+  ![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/JupyterNotebook_debug_mode2.PNG)
+    
