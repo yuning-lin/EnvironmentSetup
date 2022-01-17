@@ -1,4 +1,4 @@
-## 開始安裝
+## Windows 開始安裝
 [Windows 官方下載連結](https://dev.mysql.com/downloads/windows/installer/)   
 下面選項按 download  
   
@@ -49,5 +49,31 @@
 
 ![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/workbench_user_interface.PNG)  
 
+## Mac 開始安裝
+1. [官方下載頁面](https://dev.mysql.com/downloads/mysql/)
+2. 選取相應版本後，示範選 dmg 下載 > 點選 `No thanks, just start my download.`
+  
+  ![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/mysql_mac_download.png)
+  
+3. 打開下載檔案進行安裝 > 為 root 設置密碼 > 安裝完成
+4. 打開終端機 > 切換至根目錄 > 編輯 bash_profile
+  ```
+  cd ~
+  vim ./.bash_profile
+  ```
+5. 按 i 進行 insert 環境變數 > esc > wq 寫入後離開
+  ```
+  export PATH=$PATH:/usr/locol/mysql/bin
+  export PATH=$PATH:/usr/local/mysql/support-files
+  ```
+6. 系統偏好設定 > 點選 mysql > 可以更改路徑並套用
+  ![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/mysql_mac_system_preference.png)
+  ![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/mysql_mac_configuration.png)
+7. 開啟終端機 > `mysql -u root -p` 如看到 `sh:command not found: mysql`
+    * 每次輸入： `alias mysql=/usr/local/mysql/bin/mysql` > `mysql -u root -p`
+    * 永久更改：
+       1. 更改檔案：`cd ~` > `vim ~/.bashrc` > 添加 `alias mysql=/usr/local/mysql/bin/mysql` > esc > wq
+       2. 重啟終端機：source ~/.bashrc > mysql
+  ![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/mysql_mac_terminal_activate.png)
 ## 其他圖型化界面
 * [HeidiSQL 安裝教學](https://github.com/yuning-lin/EnvironmentSetup/tree/main/HeidiSQL)
