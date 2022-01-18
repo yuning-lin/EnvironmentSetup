@@ -63,7 +63,7 @@
   ```
 5. 按 i 進行 insert 環境變數 > esc > wq 寫入後離開
   ```
-  export PATH=$PATH:/usr/locol/mysql/bin
+  export PATH=$PATH:/usr/local/mysql/bin
   export PATH=$PATH:/usr/local/mysql/support-files
   ```
 6. 系統偏好設定 > 點選 mysql > 可以更改路徑並套用
