@@ -75,5 +75,11 @@
        1. 更改檔案：`cd ~` > `vim ~/.bashrc` > 添加 `alias mysql=/usr/local/mysql/bin/mysql` > esc > wq
        2. 重啟終端機：source ~/.bashrc > mysql
   ![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/mysql_mac_terminal_activate.png)
+
+## 測驗資源
+* [w3schools MySQL 選擇題](https://www.w3schools.com/quiztest/quiztest.asp?qtest=MySQL)
+* [testdome SQL 語法線上測驗](https://app.testdome.com/t?GeneratorId=12)
+* [tutorialspoint SQL 選擇題](https://www.tutorialspoint.com/sql/sql_online_test.htm)
+
 ## 其他圖型化界面
 * [HeidiSQL 安裝教學](https://github.com/yuning-lin/EnvironmentSetup/tree/main/HeidiSQL)
