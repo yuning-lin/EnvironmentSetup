@@ -13,4 +13,5 @@
 5. 後續至應用程式開啟 TablePlus > 點選下方 create a new connection 即可選取欲使用的資料庫
 ![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/tableplus_create_new_connection.png)
 ![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/tableplus_choose_connection.png)
-  
+6. 點選紅框可以選取或建立 database、 點選黃框可以寫指令
+![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/tableplus_sql_query.png) 
