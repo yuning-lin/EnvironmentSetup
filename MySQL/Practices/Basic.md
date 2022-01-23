@@ -59,10 +59,29 @@ SELECT COUNT(*) FROM Worker WHERE DEPARTMENT = 'Admin';
 ```sql
 SELECT * FROM Worker WHERE SALARY BETWEEN 100000 AND 500000;
 ```
-### Q16 選取表 Worker JOINING_DATE 是 2014 年 2 月的所有欄位
+### Q16找出表 Worker 中薪水前三名的所有欄位
+```sql
+SELECT * FROM Worker ORDER BY Salary DESC LIMIT 3;
+```
+### Q17 選取表 Worker JOINING_DATE 是 2014 年 2 月的所有欄位
 ```sql
 SELECT * FROM Worker WHERE YEAR(JOINING_DATE) = 2014 AND MONTH(JOINING_DATE) = 2;
 ```
+### Q18 秀出 WORKER_ID 為奇數／偶數的資料
+```sql
+SELECT * FROM Worker WHERE MOD (WORKER_ID, 2) <> 0;
+SELECT * FROM Worker WHERE MOD (WORKER_ID, 2) = 0;
+```
+### Q19 複製表 Worker 到表 WorkerClone
+```sql
+CREATE TABLE WorkerClone LIKE Worker;
+```
+### Q20 顯示現在日期、時間
+```sql
+SELECT CURDATE();
+SELECT NOW();
+```
+
 
 
 
