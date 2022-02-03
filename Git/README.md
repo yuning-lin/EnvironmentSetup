@@ -22,10 +22,20 @@
 [參考網址](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys)完成以下步驟即可  
 1. 開啟終端機鍵入 `ls -al ~/.ssh` 觀察是否曾建立金鑰
 2. 若出現 `No such file or directory`，則創建新金鑰；若有的話從第４步開始繼續做
-3. `ssh-keygen -t ed25519 -C "your_email@example.com"` 後可以在 `/Users/your_name/.ssh` 找到 .pub 檔
-4. 在終端機鍵入 `pbcopy < ~/.ssh/id_ed25519.pub` 以複製金鑰
-5. 在 github 首頁 > Settings > 點選左列 SSH and GPG keys > New SSH key 貼上剛剛複製的金鑰即可
-6. 接下來可以在任意專案上利用 SSH clone 專案了
+3. `ssh-keygen -t ed25519 -C "your_email@example.com"` 一路按 Enter 即可，隨後即可在 `/Users/your_name/.ssh` 找到 .pub 檔
+4. `eval "$(ssh-agent -s)"` 將 SSH key 加入 ssh-agent
+5. `nano ~/.ssh/config` 建立 config 並編輯 > 貼上下框文字 > control + X > y > Enter，儲存並離開
+      
+    ```
+    Host *
+    AddKeysToAgent yes
+    UseKeychain yes
+    IdentityFile ~/.ssh/id_ed25519
+    ```
+6. `ssh-add -K ~/.ssh/id_ed25519` 將 SSH key 加入 ssh-agent 並把密碼存於 keychain
+7. `pbcopy < ~/.ssh/id_ed25519.pub` 以複製金鑰（ 開頭會是 ssh-ed25519 結尾是 email ）
+8. 在 github 首頁 > Settings > 點選左列 SSH and GPG keys > New SSH key 貼上剛剛複製的金鑰即可
+9. 接下來可以在任意專案上利用 SSH clone 專案了
 
 ## BASH 快捷鍵
 快捷鍵|意義
