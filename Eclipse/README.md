@@ -31,9 +31,11 @@ python 本身也有 IDE 只是有點陽春...
       
     ![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/choose_python_env.PNG)  
       
-    * 使用客製虛擬環境：用 [CMD 創建虛擬環境](https://github.com/yuning-lin/EnvironmentSetup/tree/main/Python#%E8%99%9B%E6%93%AC%E7%92%B0%E5%A2%83)後，選右方 Browse for python/pypy exe，出現 python.exe，在點選下方 Apply and Close
+    * 使用客製虛擬環境：用 [CMD 創建虛擬環境](https://github.com/yuning-lin/EnvironmentSetup/tree/main/Python#%E8%99%9B%E6%93%AC%E7%92%B0%E5%A2%83)後，選右方 Browse for python/pypy exe，出現 python.exe，在點選下方 Apply and Close > 在 Selection needed 點選 Select All
       
     ![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/choose_python_env2.png)  
+      
+    * 在創建新專案時點選 eclipse 已存取的虛擬環境可立即使用
       
 3. 調整編碼：於介面上方點選 Window ＞ Preferences ＞ 打關鍵字 en ＞ General ＞ Editors ＞ Workspace ＞ UTF-8  
      
