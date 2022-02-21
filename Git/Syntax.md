@@ -1,5 +1,6 @@
 ## 語法簡介
 對於使用黑窗不習慣的人，有很多圖型化界面工具用點選操作進行版本控制如：[tortoise](https://tortoisegit.org/download/) 、 [sourcetree](https://www.sourcetreeapp.com/) 等  
+或是直接用 git bash 呼叫 [gitk](https://github.com/yuning-lin/EnvironmentSetup/blob/main/Git/RelatedUI.md#gitk-%E6%93%8D%E4%BD%9C)、[git gui](https://github.com/yuning-lin/EnvironmentSetup/blob/main/Git/RelatedUI.md#git-gui-%E6%93%8D%E4%BD%9C)  
 官方也有列出幾款比較常用的於：https://git-scm.com/downloads/guis  
 但用下指令的方式會比較直接，無須找功能在選單的位置，也可以藉此熟悉黑窗操作  
 下表列出比較常使用的語法，更進階的語法可以遇到問題後再另外查詢  
@@ -10,6 +11,7 @@ git branch --remote|秀出這個專案遠端所有分支
 git init|初始化當前目錄，讓 GIT 開始對此目錄進行版本控制
 git status|查詢當前目錄的狀態
 git clone ssh_value|把專案複製一份並存在同名的目錄裡
+git clone ssh_value new_folder_name|把專案複製一份並存在新命名的目錄裡
 git clone ssh -b branch_name|在本機端，將遠端檔案庫的全部檔案複製一份下來，並指定 branch 的名字（可不必同 remote 端）
 git branch|知道現在在哪個分支，以及這個專案有哪些其他分支
 git branch branch_name|建立分支
@@ -40,4 +42,5 @@ git reset --hard <SHA256> |回復到遠端節點
 git remote update --prune|等同 git fetch --all，更新所有遠端分支（--prune 把原本刪除的 remote branch 刪除）
 git revert <SHA256>|還原成此 commit 前一個狀態
 git submodule update --init --recursive|更新 submodule
-gitk --all & |在 windows 可以叫出 UI 介面
+[gitk --all &](https://github.com/yuning-lin/EnvironmentSetup/blob/main/Git/RelatedUI.md#gitk-%E6%93%8D%E4%BD%9C)|在 windows 可呼叫出 history 的 UI 介面，右鍵點選即可進行操作
+[git gui &](https://github.com/yuning-lin/EnvironmentSetup/blob/main/Git/RelatedUI.md#git-gui-%E6%93%8D%E4%BD%9C)|在 windows 可呼叫出進行 git 指令的 UI 介面
