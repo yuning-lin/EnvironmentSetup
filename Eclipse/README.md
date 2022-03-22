@@ -10,9 +10,10 @@ python 本身也有 IDE 只是有點陽春...
 有興趣的可以跟著下面的步驟安裝看看  
 
 ## 開始安裝
-1. [JAVA 官方下載連結](https://github.com/ojdkbuild/ojdkbuild/blob/master/README.md)（需先安裝 JAVA 才能安裝 Eclipse）  
-2. [Eclipse 官方下載連結](https://www.eclipse.org/downloads/)（windows 根據位元選擇下載版本，EX：64 位元下載檔名為 x86_64.msi 結尾）  
-3. 點選 eclipse-inst-win64.exe ＞ 選擇「Eclipse IDE for Eclipse Committers」＞ INSTALL ＞ ACCEPT ＞ LAUNCH  
+1. [python 官方下載連結](https://www.python.org/downloads/)（安裝後 eclipse 才能對接 python）
+2. [JAVA 官方下載連結](https://github.com/ojdkbuild/ojdkbuild/blob/master/README.md)（需先安裝 JAVA 才能安裝 Eclipse）  
+3. [Eclipse 官方下載連結](https://www.eclipse.org/downloads/)（windows 根據位元選擇下載版本，EX：64 位元下載檔名為 x86_64.msi 結尾）  
+4. 點選 eclipse-inst-win64.exe ＞ 選擇「Eclipse IDE for Eclipse Committers」＞ INSTALL ＞ ACCEPT ＞ LAUNCH  
   
 ![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/eclipse_committers.PNG)  
   
