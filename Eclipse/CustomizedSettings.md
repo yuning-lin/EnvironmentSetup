@@ -24,6 +24,7 @@
   * 調整程式碼字體：Basic > Text Font > 點選 Edit
   * 調整左側專案樹狀字體：View and Editor Folder > Tree and table font for views
   * 調整檔案點開 banner 字體：View and Editor Folder > Part title font
+* 更換 Console 顏色配置：Window > Preferences > PyDev > 點選 Interactive Console
 
 ## 改變主題背景
 * 簡易更換：General > 點選 Appearence > Theme 選 `Dark`
