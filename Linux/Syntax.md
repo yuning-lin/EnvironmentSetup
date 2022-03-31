@@ -23,7 +23,8 @@
 `kill process_id`|關掉指定 process_id 的 process
 
 ## tmux 相關用法
-* [參考教學文件](https://blog.gtwang.org/linux/linux-tmux-terminal-multiplexer-tutorial/)
+* [參考教學文件](https://blog.gtwang.org/linux/linux-tmux-terminal-multiplexer-tutorial/)  
+  
 語法|意義
 ----|----
 `sudo apt install tmux`|Ubuntu Linux 安裝 tmux
