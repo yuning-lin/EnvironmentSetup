@@ -21,5 +21,13 @@
 
 ## 安裝步驟：
 1. 前往官網[Docker Hub](https://hub.docker.com/)註冊帳號密碼
+  
+  ![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/docker_sign_up.PNG)
+  
 2. 根據需求點選費用選項 > 前往註冊信箱進行驗證
+  
+  ![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/docker_fee_options.PNG)
+  
 3. 根據作業系統下載 Docker（示範案例為 Windows 10）
+  
+  ![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/docker_download_by_os.PNG)
