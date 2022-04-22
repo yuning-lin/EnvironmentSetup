@@ -26,11 +26,18 @@
 3. 創建該虛擬環境於 Jupyter Notebook
    * 該虛擬環境需先安裝 `pip install ipykernel`
    * 指令：`python -m ipykernel install --user --name py39_torch --display-name "py39_torch"`
-   * 註：--name 是 Jupyter 在內部使用的名稱、--display-name 是 notebook menus 會看到的名稱。該命令會覆蓋任何具有相同名稱的現有 kernel。
+   * 註：
+      * --name 是 Jupyter 在內部使用的名稱
+      * --display-name 是 notebook menus 會看到的名稱
+      * 此指令會覆蓋任何具有相同名稱的現有 kernel
    * 在 UI 介面的 New 即可在新虛擬環境創建 .ipynb，如圖
      
    ![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/JupyterNotebook_create_env_menu.PNG)
-
+4. 查看與刪除虛擬環境選項
+   * EX：查看有哪些虛擬環境
+   * 指令：`jupyter kernelspec list`
+   * EX：刪除指定虛擬環境 py39_torch
+   * 指令：`jupyter kernelspec uninstall py39_torch`
 ## 如何 debug
 1. 利用套件 `pdb`、`IPython` 的 `set_trace()` 下中斷點
 2. run cell 即可進入 debug 模式，cell 也會顯示正在運行 `[*]`
