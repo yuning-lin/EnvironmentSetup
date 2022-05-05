@@ -34,7 +34,8 @@ git mv oldfolder newfolder|變更資料夾名、檔名
 git rm -r –cached folder_name|移除資料夾 git管理
 git diff|秀出修改不同之處
 git checkout HEAD^ filename|回到前一個版本
-git stash|備份當前工作區
+git stash|僅備份暫存區檔案
+git stash save -u "notes"|-u 可以備份暫存跟未追蹤檔案，怕忘記內容可以存 notes
 git stash pop|讀取最新一次保存內容並恢復
 git stash list|列出所有備份
 git stash clear|清空備份
