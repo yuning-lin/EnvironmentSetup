@@ -55,3 +55,5 @@
    
   ![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/JupyterNotebook_debug_mode2.PNG)
     
+## 參考資源
+* [官方：IPython Magic Commands in Jupyter Notebook](https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/)
