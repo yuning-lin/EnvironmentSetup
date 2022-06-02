@@ -56,4 +56,4 @@
 |刪除虛擬環境|`pyenv uninstall env_test`|
 
 ## 參考來源
-* [官方：Pyenv for Windows]https://github.com/pyenv-win/pyenv-win#manually-check-the-settings
+* [官方：Pyenv for Windows](https://github.com/pyenv-win/pyenv-win#manually-check-the-settings)
