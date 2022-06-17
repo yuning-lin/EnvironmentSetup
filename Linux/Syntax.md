@@ -18,9 +18,22 @@
 ----|----
 `htop`|顯示當前執行的工作項目、CPU 及 Memory 等使用情況
 `nohup python3 app.py &`|在後台用 python3 執行 app.py
-`crontab -e`|看所有正在執行中的 process
 `ps aux \| grep A`|列出執行中名字有 A 的 process
 `kill process_id`|關掉指定 process_id 的 process
+
+## crontab 工作排程相關指令
+* [crontab 時間設定](https://crontab.guru/)  
+  
+語法|意義
+----|----
+`crontab -l`|查看 crontab 內容
+`crontab -e`|編輯 crontab 內容
+`crontab -r`|刪除 crontab 內容
+`sudo crontab -u user_name -l`|查看指定使用者 crontab 內容
+`crontab -u user_name -e`|編輯指定使用者 crontab 內容
+`* * * * * path_of_file --parameter`|新增 crontab 設定
+`* * * * * user_name path_of_file --parameter`|新增指定使用者 crontab 設定
+
 
 ## tmux 相關用法
 * [參考教學文件](https://blog.gtwang.org/linux/linux-tmux-terminal-multiplexer-tutorial/)  
