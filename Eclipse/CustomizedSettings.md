@@ -1,20 +1,25 @@
 ## Code Style
-#### 選擇 Code Formatter
-1. Window > Preferences > PyDev > Editor > Code Style > Code Formatter
-2. 選擇 autopep8（default 段行字數：79）
-3. 若想要改變設置：
-    * 改變斷行長度為 150 字：可在 `Parameters for autopep8` 後方空白格處輸入 `--max-line-length=150`
-    * 免除斷行預設為 79 字：可在 `Parameters for autopep8` 後方空白格處輸入 `--ignore E501`
-4. Apply and Close
+### Code Formatter
+1. 選擇 Code Formatter
+   1. Window > Preferences > PyDev > Editor > Code Style > Code Formatter
+   2. 選擇 autopep8（default 段行字數：79）
+   3. 若想要改變設置：
+       * 改變斷行長度為 150 字：可在 `Parameters for autopep8` 後方空白格處輸入 `--max-line-length=150`
+       * 免除斷行預設為 79 字：可在 `Parameters for autopep8` 後方空白格處輸入 `--ignore E501`
+   4. Apply and Close
 
-#### 套用 Code Formatter
-* Window > Preferences > PyDev > Editor > Save Actions > 勾選 `Auto-format editor contents before saving`
-* 如此可以在修改後按儲存時自動套用格式
+2. 套用 Code Formatter
+   * Window > Preferences > PyDev > Editor > Save Actions > 勾選 `Auto-format editor contents before saving`
+   * 如此可以在修改後按儲存時自動套用格式
 
-#### 檢視當前程式是否符合 Code Formatter 設置
-* 診斷是否符合 autopep8 設置：project > 右鍵 > PyDev > Code Analysis
-* 快捷鍵使用 autopep8 斷行：`ctrl+shift+f`
-* 不符設定的程式碼會在行頭顯示 `!`，修正後儲存即可
+3. 檢視當前程式是否符合 Code Formatter 設置
+   * 診斷是否符合 autopep8 設置：project > 右鍵 > PyDev > Code Analysis
+   * 快捷鍵使用 autopep8 斷行：`ctrl+shift+f`
+   * 不符設定的程式碼會在行頭顯示 `!`，修正後儲存即可
+
+### Imports
+* Window > Preferences > PyDev > Editor > Code Style > Imports
+* 選擇 import 排序引擎，建議使用 isort，可以參考[官網](https://pycqa.github.io/isort/index.html)設置
 
 ## 個人化顯示
 * 改變顯示符號：General > Editors > Text Editors
