@@ -11,6 +11,12 @@
 4. 激活虛擬環境後可以安裝某專案指定套件：`source env_test/Script/activate`
 5. 解除虛擬環境：`deactivate`
 
+## venv
+* 安裝最新且是乾淨的 python 版本：`python -m venv env_test`
+* 若同時有 python2、python3，可以指定：`python3 -m venv env_test`
+* 激活虛擬環境後可以安裝某專案指定套件：`source env_test/Script/activate`
+* 解除虛擬環境：`deactivate`
+
 ## pyenv
 #### Windows
 1. 取得 pyenv-win
