@@ -19,7 +19,10 @@
 ### 缺點：
 * 宿主和容器之間在硬體上並非完全切割，故可能會有病毒傳染、搶資源的情形
 
-## 安裝步驟：
+## 從 docker docs 安裝
+1. 前往官網選擇對應系統[下載](https://docs.docker.com/desktop/windows/install/)
+
+## 從 docker hub 安裝
 1. 前往官網[Docker Hub](https://hub.docker.com/)註冊帳號密碼
   
   ![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/docker_sign_up.PNG)
