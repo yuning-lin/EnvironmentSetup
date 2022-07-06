@@ -21,6 +21,16 @@
 
 ## 從 docker docs 安裝
 1. 前往官網選擇對應系統[下載](https://docs.docker.com/desktop/windows/install/)
+2. 點 `Docker Desktop Installer.exe` 兩下進行安裝，預設勾勾保留並重新開機
+3. 錯誤訊息：
+    1. `Hardware assisted virtualization and data execution protection must be enabled in the BIOS`
+        * 以下步驟啟動模擬：
+        * 按 `windows+I` > 更新與安全性 > 復原 > 立即重新啟動
+        * 重新開機之後會進入「WinRE」的環境 > 疑難排解 > 進階選項 > UEFI 韌體設定
+        * 每家主機板商不太一樣，但可以尋找類似選項：Security > Virtualization > Intel Virtualization Technology: On > Intel VT-d Feature: On
+        * 可以看見虛擬：已停用 --> 已啟用
+    2. `WSL 2 installation is incomplete`
+        * 根據 docker 錯誤提示的[連結](https://docs.microsoft.com/zh-tw/windows/wsl/install-manual#step-4---download-the-linux-kernel-update-package)
 
 ## 從 docker hub 安裝
 1. 前往官網[Docker Hub](https://hub.docker.com/)註冊帳號密碼
