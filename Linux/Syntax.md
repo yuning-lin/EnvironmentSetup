@@ -36,14 +36,24 @@
 
 
 ## tmux 相關用法
-* [參考教學文件](https://blog.gtwang.org/linux/linux-tmux-terminal-multiplexer-tutorial/)  
+終端機管理工具。  
+可以同時開啟多個獨立的 session 執行背景程式、啟著 api 等  
+* [Blog：Linux tmux 終端機管理工具使用教學](https://blog.gtwang.org/linux/linux-tmux-terminal-multiplexer-tutorial/) 
+* [Blog：終端機 session 管理神器 — tmux](https://larrylu.blog/tmux-33a24e595fbc) 
   
 語法|意義
 ----|----
 `sudo apt install tmux`|Ubuntu Linux 安裝 tmux
+`tmux`|進入 tmux（會在視窗底部出現綠色狀態列）
 `man tmux`|tmux 使用手冊
 `tmux ls`|列出所有在執行的 session
+`tmux new -s session_name`|創建一個新的 session_name 
 `tmux a -t session_name`|追蹤該 session_name 運行狀況
+`tmux set mouse on`|設定可以滑鼠滾動
+
+鍵盤輸入|意義
+----|----
+crtl + B 放開再按 D | 跳出 tmux
 
 
 ## vim 相關用法
