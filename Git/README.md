@@ -9,12 +9,22 @@
 * 非必要，不要上傳 RAW DATA
 * 不要上傳任何跟帳密相關的資訊
 * 不要上傳任何跟個資相關的 LOG、資料等
+* 可以用 [.gitignore](https://github.com/yuning-lin/EnvironmentSetup/blob/main/Git/Ignore.md) 做管理
 
 ## 圖示簡介  
 剛開始直接讀 git 語法沒有這種圖，對架構總是有點霧煞煞  
 有這種圖表示每個動作大致的關係，新手應該較能理解  
-[圖片來源](https://unwiredlearning.com/blog/git-basic-for-beginners/)也有英文版教學  
-![](https://unwiredlearning.com/wp-content/uploads/2018/07/git-flow-1024x684.png)
+
+```mermaid
+    sequenceDiagram
+          workspace->>staging area: add
+          staging area->>local repository: commit
+          local repository->>remote repository: push
+          remote repository->>local repository: clone
+          local repository->>workspace: checkout
+          remote repository->>workspace: pull
+        
+```
 
 ## 建立連結
 地端必須產生金鑰，並且必須告訴遠端金鑰為何  
