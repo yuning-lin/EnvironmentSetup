@@ -9,9 +9,14 @@
 `mkdir /Users/user_name/folder_name`|創建 /Users/user_name/folder_name
 `cd /Users/user_name/folder_name`|移動至 /Users/user_name/folder_name
 `touch file_name.txt`|創建 file_name.txt
+`find . -name file_name.txt`|尋找當前目錄底下名為 file_name.txt 的檔案
+`rm file_name.txt`|刪除 file_name.txt
+`mv file_name.txt src`|移動 file_name.txt 於 src 下
+`cp file_name.txt src`|複製 file_name.txt 於 src 下
 `echo "This is a test." > ./test.txt`|創建內容為 This is a test. 至當前目錄下的 test.txt
 `cat ./test.txt`|顯示當前目錄下 test.txt 的檔案內容
 `curl -O https://s3-ap-northeast-1.amazonaws.com/sqlite-demo-data/gapminder.csv`|下載該網站之 gapminder.csv
+`sudo apt-get install vim`| 讓一般用戶得以用系統管理員的身分執行 vim 套件的安裝（sudo：仿管理員身分、apt-get：套件管理工具）
 
 ## VM 工作執行相關用法
 語法|意義
@@ -57,9 +62,24 @@ crtl + B 放開再按 D | 跳出 tmux
 
 
 ## vim 相關用法
+`vim file_name.txt`：開啟視窗編輯 file_name.txt
+  
 語法|意義
 ----|----
 `i`|編輯文字
 esc 鍵|存檔
 `:wq`|儲存並離開
 `q!`|強制離開
+
+## nano 相關用法
+`nano file_name.txt`：開啟視窗編輯 file_name.txt
+  
+語法|意義
+----|----
+`Ctrl + V`|移動到上一頁
+`Ctrl + Y`|移動到下一頁
+`Ctrl + W`|搜尋文字內容
+`Ctrl + X`|離開
+
+## 參考資源
+* [Blog：Linux指令集](https://www.pcnet.idv.tw/pcnet/linux/linux_command.htm)
