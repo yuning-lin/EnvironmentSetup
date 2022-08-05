@@ -47,7 +47,7 @@
 |意義|語法|
 |---|---|
 |列出所有 pyenv 支援的 python 版本|`pyenv install -l`|
-|過濾 pyenv 支援指定的 python 版本|`pyenv install -l | findstr 3.8`|
+|過濾 pyenv 支援指定的 python 版本|`pyenv install -l \| findstr 3.8`|
 |安裝 pyenv 單個或多個指定的 python 版本|`pyenv install 3.5.2 3.6.8`|
 |設置指定的 python 版本為全域版本，前提是尚未設置區域版本|`pyenv global 3.5.2`|
 |設置指定的 python 版本為當前資料夾的區域版本，不同於虛擬環境，不需激活|`pyenv global 3.5.2`|
