@@ -46,13 +46,13 @@ inotifywait -m -d -o events.log /tmp
 '''
 監控 monitored_folder 是否有新建或移入的檔案
 有則將新建或移入的檔案名稱、路徑、新建或移入的時間記錄於 monitor.log
-以及將觸發對應動作的螢幕輸出、錯誤輸出記錄於 monitor.log
+以及指定 python 環境觸發對應動作的螢幕輸出、錯誤輸出記錄於 monitor.log
 '''
 
 inotifywait -m $1 -e create -e moved_to /monitored_folder |
     while read path action file; do
         echo "The file '$file' appeared in directory '$path' via '$action' at '$(date '+%Y/%m/%d %H:%M:%S')'" | tee -a monitor.log
-        python3 main.py $1 $2 | tee -a monitor.log
+        /home/test/.pyenv/versions/3.6.10/envs/env-test/bin/python /home/test/src/main.py $1 $2 | tee -a monitor.log
     done
 ```
 
