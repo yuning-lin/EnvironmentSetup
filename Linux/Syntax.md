@@ -19,6 +19,8 @@
 `sudo apt-get install vim`| 讓一般用戶得以用系統管理員的身分執行 vim 套件的安裝（sudo：仿管理員身分、apt-get：套件管理工具）
 
 ## VM 工作執行相關用法
+* [Linux 技術支援 - Process（進程）](https://www.hy-star.com.tw/tech/linux/process/process.html#jobs)
+  
 語法|意義
 ----|----
 `htop`|顯示當前執行的工作項目、CPU 及 Memory 等使用情況
