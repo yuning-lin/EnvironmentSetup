@@ -29,7 +29,7 @@
 `kill process_id`|關掉指定 process_id 的 process
 
 ## crontab 工作排程相關指令
-* [crontab 時間設定](https://crontab.guru/) 
+* [情境模擬範例](https://github.com/yuning-lin/EnvironmentSetup/blob/main/Linux/BySenarios/CreateCronJob.md) 
 * 部分編輯的概念跟 vim 指令通用 
   
 語法|意義
@@ -37,10 +37,6 @@
 `crontab -l`|查看 crontab 內容
 `crontab -e`|編輯 crontab 內容
 `crontab -r`|刪除 crontab 內容
-`i`|進入編輯模式
-`:`|進入命令模式
-`Ctrl + C`|離開編輯
-`:wq`|進入命令模式後，儲存並離開
 `sudo crontab -u user_name -l`|查看指定使用者 crontab 內容
 `crontab -u user_name -e`|編輯指定使用者 crontab 內容
 `* * * * * path_of_file --parameter`|新增 crontab 設定
