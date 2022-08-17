@@ -24,9 +24,11 @@
 語法|意義
 ----|----
 `htop`|顯示當前執行的工作項目、CPU 及 Memory 等使用情況
-`nohup python3 app.py &`|在後台用 python3 執行 app.py
-`ps aux \| grep A`|列出執行中名字有 A 的 process
+`nohup python3 app.py &`|在背景用 python3 執行 app.py（nohup：不斷地執行、&：在背景執行）
+`ps aux \| grep A`|列出執行中名字有 A 的 process（a：顯示所有 process、u：以用戶為主的格式来顯示、x：不以終端機區分）
+`ps aux \| grep app.py`|列出執行命令中名字有 app.py 的 process
 `kill process_id`|關掉指定 process_id 的 process
+`netstat -ap\|grep port_num`|檢視佔用此 port_num 的 process
 
 ## crontab 工作排程相關指令
 * [情境模擬範例](https://github.com/yuning-lin/EnvironmentSetup/blob/main/Linux/BySenarios/CreateCronJob.md) 
