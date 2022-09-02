@@ -7,7 +7,7 @@
 必須先下載 python 後才可以使用  
 以下以 Git Bash 為例：
 1. 安裝套件：`pip3 install virtualenv`
-2. 指定虛擬環境 python 版本並命名為 env_test`：`virtualenv --python "C:\Users\username\AppData\Local\Programs\Python\Python36\python.exe" env_test`
+2. 指定虛擬環境 python 版本並命名為 env_test：`virtualenv --python "C:\Users\username\AppData\Local\Programs\Python\Python36\python.exe" env_test`
 4. 激活虛擬環境後可以安裝某專案指定套件：`source env_test/Script/activate`
 5. 解除虛擬環境：`deactivate`
 
