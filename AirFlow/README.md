@@ -37,46 +37,93 @@ graph LR;
 ## 安裝步驟
 經過多個網站交叉比對單純在 windows 上安裝 airflow 不可使用的（測試結果真的不行）  
 所以本文紀錄整合資訊完的流程，希望之後有更簡易的方式    
-1. Install WSL：跟著官網指示[安裝 WSL](https://docs.microsoft.com/zh-tw/windows/wsl/install-win10#manual-installation-steps)（Windows Subsystem for Linux）
-2. Install Ubuntu：開始 ＞ Microsoft Store > 下載 Ubuntu > 安裝後第一次需輸入使用者名稱和密碼
+### 於 powershell
+* 下載 Ubuntu： `wsl --install -d Ubuntu`
+	* 解除安裝 Ubuntu： `wsl --unregister Ubuntu`
+* 檢查 Ubuntu 是否在執行中：於 powershell 輸入 `wsl --list --verbose`
 
-![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/airflow_get_ubuntu.png)
-
+### 於 Ubuntu
+* 下載好後自動彈出的視窗輸入：username、password
 ![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/ubuntu_initial_setting.PNG)
-
-3. Python3 Setting：在 ubuntu 輸入
+* 預備好 python（需要 3.6+）所需環境及套件，其中後面兩項要比較久
+	```linux
+	sudo apt-get install software-properties-common
+	sudo apt-add-repository universe
+	sudo apt-get update
+	sudo apt install python3-pip
+	```
     1. `sudo apt update` 更新可用版本清單
     2. `sudo apt install python3-pip` 鍵入 `Y` 下載 pip
     3. `python3 --version` 確認 python3 真的存在
-4. AirFlow Setting：在 ubuntu 輸入
-    1. airflow 儲存資料路徑設置，下列二擇一
+    
+* 預備好 airflow 相依功能（目前測試不一定要執行）
+	```linux
+	sudo apt-get install libmysqlclient-dev
+	sudo apt-get install libssl-dev
+	sudo apt-get install libkrb5-dev
+	```
+    
+* 開始安裝 
+	1. 建立 AIRFLOW_HOME 變數，可用 `pwd` 獲得當前目錄位置  
+		
+        airflow 儲存資料路徑設置，下列二擇一
+        ```linux
+        export AIRFLOW_HOME=c/Users/user_name/AirflowHome
+        export AIRFLOW_HOME=~/airflow
         ```
-        export AIRFLOW_HOME=~/airflow # 預設路徑
-        export AIRFLOW_HOME=c/Users/user_name/AirflowHome # 自訂路徑：user_name 改成自己的名字
-        ```
-    2. 指定 airflow、python 版本下載
-        ```
-        AIRFLOW_VERSION=2.1.0
-        PYTHON_VERSION="$(python3 --version | cut -d " " -f 2 | cut -d "." -f 1-2)"
-        CONSTRAINT_URL="https://raw.githubusercontent.com/apache/airflow/constraints-${AIRFLOW_VERSION}/constraints-${PYTHON_VERSION}.txt"
-        sudo pip install "apache-airflow==${AIRFLOW_VERSION}" --constraint "${CONSTRAINT_URL}"
-        ```
-    3. 初始化資料庫，建立 username、password 以登入 UI 介面
-        ```
-        airflow db init
-        airflow users create --role Admin --username admin --password admin --email admin@example.com --firstname admin --lastname admin
-        ```
-5. 成功安裝的畫面如下：
+        要 source 後才真的有把路徑加入變數
+        ```linux
+		source ~/.bashrc
+		```
+	2. 安裝 airflow 套件
+		```linux
+		AIRFLOW_VERSION=2.3.4
+		PYTHON_VERSION="$(python3 --version | cut -d " " -f 2 | cut -d "." -f 1-2)"
+		CONSTRAINT_URL="https://raw.githubusercontent.com/apache/airflow/constraints-${AIRFLOW_VERSION}/constraints-${PYTHON_VERSION}.txt"
+		pip install "apache-airflow==${AIRFLOW_VERSION}" --constraint "${CONSTRAINT_URL}"
+		```
+	3. 若有警告訊息：
+		```linux
+		WARNING: The script airflow is installed in '/home/***/.local/bin' which is not on PATH.
+		```
+		解決方法：將路徑加入環境變數
+		```linux
+		export PATH=$PATH:~/.local/bin
+		source ~/.bashrc
+		```
+	4. 初始化
+		注：`airflow standalone` 僅適用於 development
+		```linux
+		airflow db init
+		```
+	5. 創建使用者並設定密碼
+		```linux
+		airflow users create \
+			--username admin \
+			--firstname Peter \
+			--lastname Parker \
+			--role Admin \
+			--email spiderman@superhero.org
+		```
+	6. 啟動 webserver service
+		```linux
+		airflow webserver --port 8080
+		```
+
+### 於瀏覽器
+
+1. 網址輸入：http://localhost:8080/
+2. 輸入在 Ubuntu 剛設定的帳號：admin、密碼：____
+3. 登入後即可見 DAG 範例
 
 ![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/airflow_interface.PNG)
 
 ## 本次安裝軟體彙總表
 軟體|版本
 ---|---
-WSL|2
 Ubuntu|20.04 LTS
-Python|3.8.5
-AirFlow|2.1.0
+Python|3.8.10
+AirFlow|2.3.4
 
 ## 常用 Ubuntu 指令
 sudo 是讓用戶安全地用盡量低的 root 權限就可以執行任務  
@@ -91,8 +138,9 @@ sudo nano {file_path}|編輯檔案內容（ctrl + s ＞ ctrl + x，存檔並離�
 sudo apt-get update|取得遠端更新伺服器的套件檔案清單
 
 ## 參考來源
-* [Running Airflow on Windows 10 & WSL](https://www.astronomer.io/guides/airflow-wsl)
-* [Running Airflow locally](https://airflow.apache.org/docs/apache-airflow/stable/start/local.html)
-* [Run Apache Airflow on Windows 10 without Docker](https://towardsdatascience.com/run-apache-airflow-on-windows-10-without-docker-3c5754bb98b4)
-* [Airflow 1.8 工作流平台搭建](https://blog.csdn.net/kk185800961/article/details/78431484)
-* [在 Ubuntu 18.04 上安装部署 Airflow 1.9.0](https://liaocy.net/2018/20180714-airflowdeploy/)
+* [Official：Running Airflow locally](https://airflow.apache.org/docs/apache-airflow/stable/start/local.html)
+* [HevoDate：Install Airflow: 4 Easy Steps](https://hevodata.com/learn/install-airflow/#How-to-Install-Airflow)
+* [TowardsDataScience：Run Apache Airflow on Windows 10 without Docker](https://towardsdatascience.com/run-apache-airflow-on-windows-10-without-docker-3c5754bb98b4)
+* [Blog：Install Airflow on Windows via Windows Subsystem for Linux (WSL)](https://kontext.tech/article/929/install-airflow-on-windows-via-windows-subsystem-for-linux)
+* [Blog：Airflow 1.8 工作流平台搭建](https://blog.csdn.net/kk185800961/article/details/78431484)
+* [Blog：在 Ubuntu 18.04 上安装部署 Airflow 1.9.0](https://liaocy.net/2018/20180714-airflowdeploy/)
