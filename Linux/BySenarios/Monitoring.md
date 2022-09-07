@@ -42,14 +42,19 @@ inotifywait -m -d -o events.log /tmp
 ```
 
 ## 完整應用範例：.sh
+監控 monitored_folder 是否有新建或移入的檔案  
+有則將新建或移入的檔案名稱、路徑、新建或移入的時間記錄於 monitor.log  
+以及指定 python 環境觸發對應動作的螢幕輸出、錯誤輸出記錄於 monitor.log  
 ```bash
-'''
-監控 monitored_folder 是否有新建或移入的檔案
-有則將新建或移入的檔案名稱、路徑、新建或移入的時間記錄於 monitor.log
-以及指定 python 環境觸發對應動作的螢幕輸出、錯誤輸出記錄於 monitor.log
-'''
-
 inotifywait -m $1 -e create -e moved_to /monitored_folder |
+    while read path action file; do
+        echo "The file '$file' appeared in directory '$path' via '$action' at '$(date '+%Y/%m/%d %H:%M:%S')'" | tee -a monitor.log
+        /home/test/.pyenv/versions/3.6.10/envs/env-test/bin/python /home/test/src/main.py $1 $2 | tee -a monitor.log
+    done
+```
+同時監控兩個以上的 folder 用空白鍵間隔  
+```bash
+inotifywait -m $1 -e create -e moved_to /monitored_folder1 /monitored_folder2 |
     while read path action file; do
         echo "The file '$file' appeared in directory '$path' via '$action' at '$(date '+%Y/%m/%d %H:%M:%S')'" | tee -a monitor.log
         /home/test/.pyenv/versions/3.6.10/envs/env-test/bin/python /home/test/src/main.py $1 $2 | tee -a monitor.log
@@ -57,4 +62,5 @@ inotifywait -m $1 -e create -e moved_to /monitored_folder |
 ```
 
 ## 參考資源
-* [B：Bash 程式設計教學與範例：inotify-tools 監控檔案變動、觸發處理動作](https://officeguide.cc/bash-tutorial-inotify-tools-file-system-monitoring/)
+* [Official：inotifywait(1) — Linux manual page](https://man7.org/linux/man-pages/man1/inotifywait.1.html)
+* [Blog：Bash 程式設計教學與範例：inotify-tools 監控檔案變動、觸發處理動作](https://officeguide.cc/bash-tutorial-inotify-tools-file-system-monitoring/)
