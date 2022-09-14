@@ -10,6 +10,7 @@ git init|初始化當前目錄，讓 GIT 開始對此目錄進行版本控制
 git status|查詢當前目錄的狀態
 git log --oneline/--all|秀出這個專案所有 commit 過的資訊
 git branch|知道現在在哪個分支，以及這個專案有哪些其他分支
+git branch -a|知道現在在哪個分支，以及這個專案包含遠端有哪些其他分支
 git branch branch_name|建立分支
 git branch --remote|秀出這個專案遠端所有分支
 git branch -d branch_name|刪除某分支，但要先 checkout 到別的分支才能使用
@@ -25,6 +26,7 @@ git checkout HEAD^ filename|回到前一個版本
 git merge branch_name|若想將現有分支合併至 master，需先切換至 master 再執行此行
 git pull|將分支更新至遠端狀態
 git pull --rebase|它在 Fetch 完成之後，便會使用 Rebase 方式進行合併，不需要因為合併而再 commit
+git pull origin remote_branch|將分支更新至遠端分支狀態
 git add abc.py|讓 GIT 開始追蹤 abc.py 此檔
 git add \*.py|把所有附檔名為 py 的檔案全家到暫存區
 git add --all|把所有檔案全加到暫存區
@@ -32,6 +34,7 @@ git commit -m "notes"|把暫存區的檔案加到永久區，並說明做了甚�
 git commit -a -m "notes"|把暫存區 changed / deleted 的檔案（不包含 untracked）加到永久區，並說明做了甚麼
 git push -u origin remote_branch|遠端節點預設使用 origin，將當前分支推向指定遠端分支（若沒有該遠端分支則建立指定名稱）
 git push remote_branch local_branch|將當前分支推向指定遠端分支（若沒有該遠端分支則建立指定名稱）
+git push origin --delete remote_branch|刪除遠端分支
 git mv oldfolder/ newfolder/|將資料夾做搬遷
 git mv oldfolder newfolder|變更資料夾名、檔名
 git rm -r –cached folder_name|移除資料夾 git管理
