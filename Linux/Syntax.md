@@ -13,6 +13,7 @@
 `rm file_name.txt`|刪除 file_name.txt
 `mv file_name.txt src`|移動 file_name.txt 於 src 下
 `cp file_name.txt src`|複製 file_name.txt 於 src 下
+`cp file_name.txt file_name2.txt`|於當前資料夾下複製 file_name.txt 並命名為 file_name2.txt
 `echo "This is a test." > ./test.txt`|創建內容為 This is a test. 至當前目錄下的 test.txt
 `cat ./test.txt`|顯示當前目錄下 test.txt 的檔案內容
 `curl -O https://s3-ap-northeast-1.amazonaws.com/sqlite-demo-data/gapminder.csv`|下載該網站之 gapminder.csv
