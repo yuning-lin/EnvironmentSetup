@@ -1,4 +1,5 @@
 ## 情境一（update or insert）
+[參考 mssqltips：Using MERGE in SQL Server to insert, update and delete at the same time](https://www.mssqltips.com/sqlservertip/1704/using-merge-in-sql-server-to-insert-update-and-delete-at-the-same-time/)  
 若新資料 primary key 沒有出現過，則新增該筆資料  
 若新資料 primary key 已經出現過，則更新該筆資料  
   
