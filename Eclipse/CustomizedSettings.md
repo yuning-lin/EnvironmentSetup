@@ -22,14 +22,17 @@
 * 選擇 import 排序引擎，建議使用 isort，可以參考[官網](https://pycqa.github.io/isort/index.html)設置
 
 ## 個人化顯示
-* 改變顯示符號：General > Editors > Text Editors
+* 改變顯示符號：Window > Preferences > General > Editors > Text Editors
   * 顯示程式碼行號：勾選 `Show line numbers`
   * 顯示換行符號等：勾選 `Show whitespace characters`
-* 調整字型、字體、大小：General > Appearence > Colors and Fonts
+* 調整字型、字體、大小：Window > Preferences > General > Appearence > Colors and Fonts
   * 調整程式碼字體：Basic > Text Font > 點選 Edit
   * 調整左側專案樹狀字體：View and Editor Folder > Tree and table font for views
   * 調整檔案點開 banner 字體：View and Editor Folder > Part title font
 * 更換 Console 顏色配置：Window > Preferences > PyDev > 點選 Interactive Console
+* 更換換行符號：Window > Preferences > General > Workspace > New text file line delimiter 勾選 Linux or Windows
+   * Windows 換行符號：CRLF
+   * Linux 換行符號：LF
 
 ## 改變主題背景
 * 簡易更換：General > 點選 Appearence > Theme 選 `Dark`
