@@ -61,3 +61,9 @@ INNER JOIN Worker
 ON W.DEPARTMENT=Worker.DEPARTMENT
 AND W.MaxSalary=Worker.SALARY;
 ```
+### Q9 兩張表上下合併
+```sql
+SELECT * FROM table_a
+UNION ALL
+SELECT * FROM table_b
+```
