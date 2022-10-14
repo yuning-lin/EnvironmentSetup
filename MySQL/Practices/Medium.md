@@ -62,8 +62,15 @@ ON W.DEPARTMENT=Worker.DEPARTMENT
 AND W.MaxSalary=Worker.SALARY;
 ```
 ### Q9 兩張表上下合併
+* 保留重複值
 ```sql
 SELECT * FROM table_a
 UNION ALL
+SELECT * FROM table_b
+```
+* 不保留重複值
+```sql
+SELECT * FROM table_a
+UNION
 SELECT * FROM table_b
 ```
