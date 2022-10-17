@@ -86,6 +86,7 @@ esc 鍵|回到一般模式
 `Ctrl + V`|移動到上一頁
 `Ctrl + Y`|移動到下一頁
 `Ctrl + W`|搜尋文字內容
+`Ctrl + O` > Enter|儲存
 `Ctrl + X`|離開
 
 ## 參考資源
