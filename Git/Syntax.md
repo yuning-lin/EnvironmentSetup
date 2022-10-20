@@ -23,7 +23,8 @@ git checkout -t -b <local_branch_name> <origin / remote_branch_name>|將遠端�
 git checkout file_name|將修改到一半的檔案還原到上次commit的狀態
 git checkout -- .|還原所有 tracked unstaged files
 git checkout HEAD^ filename|回到前一個版本
-git merge branch_name|若想將現有分支合併至 master，需先切換至 master 再執行此行
+git merge branch_name|若想將現有分支合併至 master，需先切換至 master 再執行此行<br>（`:qa`不輸入訊息並離開 vim）
+git merge --no-ff branch_name|合併分支時永遠會生成 merge commit
 git pull|將分支更新至遠端狀態
 git pull --rebase|它在 Fetch 完成之後，便會使用 Rebase 方式進行合併，不需要因為合併而再 commit
 git pull origin remote_branch|將分支更新至遠端分支狀態
