@@ -61,7 +61,7 @@ INNER JOIN Worker
 ON W.DEPARTMENT=Worker.DEPARTMENT
 AND W.MaxSalary=Worker.SALARY;
 ```
-### Q9 兩張表上下合併
+### 兩張表上下合併
 * 保留重複值
 ```sql
 SELECT * FROM table_a
@@ -73,4 +73,10 @@ SELECT * FROM table_b
 SELECT * FROM table_a
 UNION
 SELECT * FROM table_b
+```
+### 計算比例
+```sql
+select k1, k2, SUM(qty) as [qty_by_key], SUM(SUM(qty)) OVER () as [total_qty], SUM(qty) / SUM(SUM(qty)) OVER () AS [ratio]
+from tb
+group by k1, k2
 ```
