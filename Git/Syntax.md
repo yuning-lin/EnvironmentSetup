@@ -50,5 +50,8 @@ git reset --hard origin/remote_branch|若有無法更新遠端分支的情況，
 git remote update --prune|等同 git fetch --all，更新所有遠端分支（--prune 把原本刪除的 remote branch 刪除）
 git revert <SHA256>|還原成此 commit 前一個狀態
 git submodule update --init --recursive|更新 submodule
+git config --get remote.origin.url|秀出遠端網址
+git ls-files|秀出當前資料夾下有被 git 管理的檔案
 [gitk --all &](https://github.com/yuning-lin/EnvironmentSetup/blob/main/Git/RelatedUI.md#gitk-%E6%93%8D%E4%BD%9C)|在 windows 可呼叫出 history 的 UI 介面，右鍵點選即可進行操作
 [git gui &](https://github.com/yuning-lin/EnvironmentSetup/blob/main/Git/RelatedUI.md#git-gui-%E6%93%8D%E4%BD%9C)|在 windows 可呼叫出進行 git 指令的 UI 介面
+
