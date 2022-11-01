@@ -88,6 +88,6 @@ from tb
 ```
 ### 條件式
 ```sql
-select iif(A = '1', B*C, B) /* if A = '1' do B*C, else do B */
+select D = iif(A = '1', B*C, B) /* if A = '1' do B*C, else do B */
 from tb
 ```
