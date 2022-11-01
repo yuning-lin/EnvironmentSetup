@@ -80,3 +80,14 @@ select k1, k2, SUM(qty) as [qty_by_key], SUM(SUM(qty)) OVER () as [total_qty], S
 from tb
 group by k1, k2
 ```
+### 數值格式轉換
+```sql
+select format(A,'N0'), /* 將數值轉成帶千分位逗號的字串 */
+       format(C,'P2')  /* 將數值轉成帶 % 以及取到小數點後兩位的字串 */
+from tb
+```
+### 條件式
+```sql
+select iif(A = '1', B*C, B) /* if A = '1' do B*C, else do B */
+from tb
+```
