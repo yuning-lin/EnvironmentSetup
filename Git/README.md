@@ -56,4 +56,5 @@ ctrl + C | 暫停執行
 ## 參考來源
 * [連猴子都能懂得 Git 入門指南](https://backlog.com/git-tutorial/tw/intro/intro2_1.html)
 * [為你自己學 Git](https://gitbook.tw/)
+* [Git Commit Message 這樣寫會更好，替專案引入規範與範例](https://wadehuanglearning.blogspot.com/2019/05/commit-commit-commit-why-what-commit.html)
 
