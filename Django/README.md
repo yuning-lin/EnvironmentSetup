@@ -28,7 +28,7 @@
 
 ## 安裝
 1. 建議安裝 python3.5+
-2. 激活虛擬環境
+2. 啟動虛擬環境
 3. 終端機：`pip install django==3.0.3`，下載指定版號
 4. 終端機：`django-admin --version`，有顯示版號表示安裝成功
 
