@@ -80,6 +80,29 @@ select k1, k2, SUM(qty) as [qty_by_key], SUM(SUM(qty)) OVER () as [total_qty], S
 from tb
 group by k1, k2
 ```
+### 計算各群組比例
+```sql
+select k1, k2, SUM(qty) as [qty_by_key], SUM(SUM(qty)) OVER (k1) as [total_qty], SUM(qty) / SUM(SUM(qty)) OVER (k1) AS [ratio]
+from tb
+group by k1, k2
+```
+### 篩選各群組前幾名
+* ROW_NUMBER() 一定要搭配 over 使用
+* ROW_NUMBER() 僅能在 select, order by 出現
+```sql
+select *
+from (
+	select top 10 a.*
+	from (
+		select k1, k2, SUM(qty) as [qty_by_key], SUM(SUM(qty)) OVER (k1) as [total_qty], SUM(qty) / SUM(SUM(qty)) OVER (k1) AS [ratio]
+		from tb 
+		group by k1, k2
+		) as a
+		order by ROW_NUMBER() over (partition by k1
+					    order by a.ratio desc)
+	) as b
+order by b.k1, b.ratio desc
+```
 ### 數值格式轉換
 ```sql
 select format(A,'N0'), /* 將數值轉成帶千分位逗號的字串 */
