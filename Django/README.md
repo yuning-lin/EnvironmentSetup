@@ -83,14 +83,29 @@
     * 注意：`migrate` 會根據 INSTALLED_APPS 的 app 順序進行更新資料庫
 5. 設定管理後臺
     1. `python manage.py createsuperuser`：輸入帳號、Email、密碼等資訊以創建後臺管理者
-    2. 在 greeting/admin.py 註冊 greeting/models.py 裡的 YourModel 資訊
-      ```python
-      from django.contrib import admin
-      from .models import YourModel
+    2. 在 greeting/admin.py 註冊 greeting/models.py 裡的 YourModel 資訊  
+      
+        ```python
+        from django.contrib import admin
+        from .models import YourModel
 
-      admin.site.register(YourModel)
-      ```
-    3. 前往：http://127.0.0.1:8000/admin，即可看見 YourModel 資訊，並可以對其進行新增、刪除、修改等動作
+        admin.site.register(YourModel)
+        ```
+    3. 前往：http://127.0.0.1:8000/admin，即可看見 YourModel 資訊，有以下兩種方式對資料庫進行新增、刪除、修改等動作
+        * 可於網頁直接手動點選操作
+        * 另外也可在終端機：`python manage.py shell`，進入 shell 操作  
+        
+        
+          ```python
+          from greeting.models import YourModel
+
+          YourModel.objects.all() # 獲取該表所有資料
+          YourModel.objects.create(title='***', content='abc') # 新增該筆資料於表 YourModel
+          YourModel.objects.get(pk=1) # 讀取 pk=1 的資料
+          YourModel.objects.filter(content__contains='a') # 讀取 content 裡有 a 的資料
+          YourModel.objects.filter(title="***").update(content='cba') # 修改 title 為 *** 的 content
+          YourModel.objects.get(pk=1).delete() # 刪除 pk=1 的資料
+          ```
 
 ## 創建 templates
 * 建立與 manage.py 同層的 templates 資料夾
