@@ -74,13 +74,23 @@
         'django.contrib.sessions',
         'django.contrib.messages',
         'django.contrib.staticfiles',
-        'greeting.apps.GreetingConfig', # 'greeting' 盡量別用
+        'greeting.apps.GreetingConfig', # 左邊所列可參考 greeting/apps.py 檔案內容；盡量別用簡寫 'greeting'
     )
     ```
 4. 同步資料庫
-  * `python manage.py makemigrations`：根據 greeting/models.py 修改內容建立新的檔案於 migrations 中
-  * `python manage.py migrate`：把 greeting/models.py 存於 migrations 中的修改內容更新至資料庫中
-  * 注意：`migrate` 會根據 INSTALLED_APPS 的 app 順序進行更新資料庫
+    1. `python manage.py makemigrations`：根據 greeting/models.py 修改內容建立新的檔案於 migrations 中
+    2. `python manage.py migrate`：把 greeting/models.py 存於 migrations 中的修改內容更新至資料庫中
+    * 注意：`migrate` 會根據 INSTALLED_APPS 的 app 順序進行更新資料庫
+5. 設定管理後臺
+    1. `python manage.py createsuperuser`：輸入帳號、Email、密碼等資訊以創建後臺管理者
+    2. 在 greeting/admin.py 註冊 greeting/models.py 裡的 YourModel 資訊
+      ```python
+      from django.contrib import admin
+      from .models import YourModel
+
+      admin.site.register(YourModel)
+      ```
+    3. 前往：http://127.0.0.1:8000/admin，即可看見 YourModel 資訊，並可以對其進行新增、刪除、修改等動作
 
 ## 創建 templates
 * 建立與 manage.py 同層的 templates 資料夾
