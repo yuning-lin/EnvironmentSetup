@@ -77,7 +77,37 @@
         'greeting',
     )
     ```
+4. 同步資料庫
+  * `python manage.py makemigrations`：根據 greeting/models.py 修改內容建立新的檔案於 migrations 中
+  * `python manage.py migrate`：把 greeting/models.py 存於 migrations 中的修改內容更新至資料庫中
+  * 注意：`migrate` 會根據 INSTALLED_APPS 的 app 順序進行更新資料庫
 
+## 創建 templates
+* 建立與 manage.py 同層的 templates 資料夾
+* Django 在 html 有自己的 Python 語法  
+  
+  * 呈現變數
+  ```python
+  <title>{{<variable_name>}}</title>
+  ```
+  * 迴圈
+  ```python
+  {% for <element> in <list> %}
+  ...
+  {% endfor %}
+  ```
+  * 邏輯判斷
+  ```python
+  {% if %}
+  ... 
+  {% else %}
+  ...
+  {% endif %}
+  ```
+  * Filters
+  ```python
+  {{<變數名稱>|<filter功能>:<filter參數>}}
+  ```
 ## 修改設定（EX：HelloWorld/settings.py）
 1. 修改語言、時區
     * 預設：
@@ -118,8 +148,49 @@
         },
     }
     ```
-
+3. 修改 templates 路徑
+    * 預設：
+    ```python
+    TEMPLATES = [
+        {
+            'BACKEND': 'django.template.backends.django.DjangoTemplates',
+            'DIRS': [],
+            'APP_DIRS': True,
+            'OPTIONS': {
+                'context_processors': [
+                    'django.template.context_processors.debug',
+                    'django.template.context_processors.request',
+                    'django.contrib.auth.context_processors.auth',
+                    'django.contrib.messages.context_processors.messages',
+                ],
+            },
+        },
+    ]
+    ```
+    * MSSQL：（終端機：`pip install django mssql-django`，安裝 mssql-django）
+    ```python
+    TEMPLATES = [
+        {
+            'BACKEND': 'django.template.backends.django.DjangoTemplates',
+            'DIRS': [os.path.join(BASE_DIR, 'templates').replace('\\', '/')],
+            'APP_DIRS': True,
+            'OPTIONS': {
+                'context_processors': [
+                    'django.template.context_processors.debug',
+                    'django.template.context_processors.request',
+                    'django.contrib.auth.context_processors.auth',
+                    'django.contrib.messages.context_processors.messages',
+                ],
+            },
+        },
+    ]
+    ```
+    
 ## 參考資源
+* [Docs：Writing your first Django app, part 1](https://docs.djangoproject.com/en/1.8/intro/tutorial01/)
+* [Docs：The Django Book](https://django-book.readthedocs.io/en/latest/)
 * [Blog：程式語言的框架](https://docs.f5ezcode.in/cs-basic/di-ba-zhang-gong-cheng-de-gong-ju/8.2-cheng-shi-yan-de-kuang-jia)
+* [Blog：Django 介紹](https://djangogirlstaipei.gitbooks.io/django-girls-taipei-tutorial/content/django/introduction.html)
 * [Org：Django 介紹](https://developer.mozilla.org/zh-TW/docs/Learn/Server-side/Django/Introduction)
 * [Org：Django 教程](https://www.runoob.com/django/django-tutorial.html)
+* [Org：Django Packages](https://djangopackages.org/)
