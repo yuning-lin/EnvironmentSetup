@@ -64,7 +64,7 @@
     greeting/tests.py|測試檢查業務邏輯相關內容
     greeting/views.py|主要程式撰寫處，定義業務邏輯相關內容，會和 HelloWorld/urls.py 做呼應傳遞前端頁面
     greeting/migrations/|紀錄 models.py 所創建的資料庫型態
-3. **app 間有時須考慮先後順序**，此處將 greeting 新增至 HelloWorld/settings.py 中 INSTALLED_APPS 的最後一個
+3. **app 間有時須考慮先後順序**，此處將名為 greeting 的 app 新增至 HelloWorld/settings.py 中 INSTALLED_APPS 的最後一個
 
     ```python
     INSTALLED_APPS = (
@@ -74,7 +74,7 @@
         'django.contrib.sessions',
         'django.contrib.messages',
         'django.contrib.staticfiles',
-        'greeting',
+        'greeting.apps.GreetingConfig', # 'greeting' 盡量別用
     )
     ```
 4. 同步資料庫
