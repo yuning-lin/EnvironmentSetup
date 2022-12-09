@@ -17,4 +17,23 @@ Ultimate|支援工具全面|僅 30 天試用
    
     ![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/intellij_installation_options.PNG)
    
-3. 重啟電腦後，打開 IntelliJ IDEA
+3. 重啟電腦後，打開 IntelliJ IDEA，點選 New Project 即可開新專案
+   
+    ![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/intellij_welcome_page.PNG)
+   
+### 安裝 Spring Assistant
+1. 點選左列 Plugins > 中列輸入：Spring Assistant > 右列點選安裝
+   
+    ![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/intellij_spring_assistant.PNG)
+   
+2. 點選左列：Projects > New Project > 即可點選 Spring Assistant
+   
+    ![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/intellij_new_spring_assistant.PNG)
+   
+3. Spring Assistant 專案設定，藍框為專案名稱，Project name、Project description、Package name 會隨命名變動
+   
+    ![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/intellij_new_spring_assistant_setting.PNG)
+   
+4. 選擇 Web > 勾選 Spring Web > 選擇專案位置即可建立新專案
+   
+    ![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/intellij_new_spring_assistant_web.PNG)
