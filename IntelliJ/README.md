@@ -37,3 +37,7 @@ Ultimate|支援工具全面|僅 30 天試用
 4. 選擇 Web > 勾選 Spring Web > 選擇專案位置即可建立新專案
    
     ![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/intellij_new_spring_assistant_web.PNG)
+
+## 參考資源
+* [ithelp－【IntelliJ IDEA 入門指南】Java 開發者的神兵利器](https://ithelp.ithome.com.tw/articles/10255147)
+* [ithelp－Day 02 - 開發神器 IntelliJ](https://ithelp.ithome.com.tw/articles/10293142)
