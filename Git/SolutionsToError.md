@@ -19,3 +19,9 @@
   git reset --hard origin/master
   git clean -f -d
   ```
+
+* `error: path 'config.py' is unmerged`，未 merge 且無法 checkout
+  ```linux
+  git reset config.py
+  git checkout config.py
+  ```
