@@ -114,3 +114,20 @@ from tb
 select D = iif(A = '1', B*C, B) /* if A = '1' do B*C, else do B */
 from tb
 ```
+### 轉置單一欄位
+```sql
+SELECT 'AverageCol2' AS AVG_COL2,   
+  [0], [1], [2], [3], [4]  
+FROM  
+(
+  SELECT Col1, Col2   
+  FROM table1
+  WHERE Col3 <> 0
+) AS SourceTable  
+PIVOT  
+(  
+  AVG(Col2)  
+  FOR Col1 IN ([0], [1], [2], [3], [4])  
+) AS PivotTable; 
+```
+
