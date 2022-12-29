@@ -40,16 +40,19 @@ git mv oldfolder/ newfolder/|將資料夾做搬遷
 git mv oldfolder newfolder|變更資料夾名、檔名
 git rm -r –cached folder_name|移除資料夾 git管理
 git diff|秀出修改不同之處
+git diff <commit-hash-value>|秀出和該 commit 不同之處
 git stash|僅備份暫存區檔案
 git stash save -u "notes"|-u 可以備份暫存跟未追蹤檔案，怕忘記內容可以存 notes
 git stash push -m "msg" src/\*.py src/next_level/\*.py|暫存指定檔案，不同層的檔案可以用空格隔開輸入
 git stash pop|讀取最新一次保存內容並恢復
 git stash list|列出所有備份
 git stash clear|清空備份
-git reset --hard <SHA256> |回復到遠端節點
+git reset --hard <commit-hash-value> |回復到遠端節點
+git reset <commit-hash-value> filename|此檔案回復到該 commit 的狀態
 git reset --hard origin/remote_branch|若有無法更新遠端分支的情況，可以先 git fetch --prune 再執行此行
+
 git remote update --prune|等同 git fetch --all，更新所有遠端分支（--prune 把原本刪除的 remote branch 刪除）
-git revert <SHA256>|還原成此 commit 前一個狀態
+git revert <commit-hash-value>|還原成此 commit 前一個狀態
 git submodule update --init --recursive|更新 submodule
 git config --get remote.origin.url|秀出遠端網址
 git ls-files|秀出當前資料夾下有被 git 管理的檔案
