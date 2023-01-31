@@ -60,6 +60,7 @@
 |激活虛擬環境|`pyenv activate env_test`|
 |解除虛擬環境|`pyenv deactivate`|
 |刪除虛擬環境|`pyenv uninstall env_test`|
+|絕對路徑安裝套件|`/home/user/.pyenv/versions/env-test/bin/python -m pip install XXXX`|
 
 ## 參考來源
 * [官方：Pyenv for Windows](https://github.com/pyenv-win/pyenv-win#manually-check-the-settings)
