@@ -41,3 +41,4 @@ Ultimate|支援工具全面|僅 30 天試用
 ## 參考資源
 * [ithelp－【IntelliJ IDEA 入門指南】Java 開發者的神兵利器](https://ithelp.ithome.com.tw/articles/10255147)
 * [ithelp－Day 02 - 開發神器 IntelliJ](https://ithelp.ithome.com.tw/articles/10293142)
+* [Blog：在Intellij IDEA中使用Debug(圖文教程)](https://www.itread01.com/article/1504657417.html)
