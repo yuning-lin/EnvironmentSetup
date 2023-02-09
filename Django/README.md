@@ -134,7 +134,7 @@
   {{<變數名稱>|<filter功能>:<filter參數>}}
   ```
 ## 修改設定（EX：HelloWorld/settings.py）
-1. 修改語言、時區
+1. 修改語言、時區，[時區相關問題](https://www.cnblogs.com/bubu99/p/14774503.html)
     * 預設：
     ```python
     LANGUAGE_CODE = 'en-us'
