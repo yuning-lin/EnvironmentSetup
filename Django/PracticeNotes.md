@@ -50,3 +50,6 @@ obj, created = UserData.objects.update_or_create(
 if created:
     obj.update(**new_values)
 ```
+參考資源
+* [Doc：QuerySet API reference](https://docs.djangoproject.com/en/dev/ref/models/querysets/#get)
+* [ithelp：Models & Admin](https://ithelp.ithome.com.tw/articles/10201074)
