@@ -23,3 +23,30 @@ from test_app.models import ClassA
 參考資源
 * [Docs：聚合](https://docs.djangoproject.com/zh-hans/4.1/topics/db/aggregation/)
 * [Blog：aggregate和annotate方法使用详解与示例](https://zhuanlan.zhihu.com/p/50974992)
+
+## QuerySet by Model
+* 提取 model 內容
+```python
+from app.models import UserData
+
+UserData._meta.fields
+UserData._meta.get_fields() # 同上
+UserData._meta.get_field('Name') # 取出 field 是 Name 的資料
+```
+* 變更 model 內容
+```python
+update_values = {"is_manager": False}
+new_values = {"name": "Bob", "age": 25, "is_manager":True}
+
+# In this case, if the UserData already exists, its existing name is preserved
+obj, created = UserData.objects.get_or_create(
+        identifier=identifier, defaults={"name": name}
+)
+
+# In this case, if the UserData already exists, its name is updated
+obj, created = UserData.objects.update_or_create(
+        identifier=identifier, defaults={"name": name}
+)
+if created:
+    obj.update(**new_values)
+```
