@@ -75,8 +75,25 @@ ALTER TABLE DB_name.old_table_name RENAME TO DB_name.new_table_name;
 ## SQL in Python
 ### 套件：sqlalchemy
 #### ORM 簡介
-ORM 物件關聯對映（Object Relational Mapping）  
+ORM 物件關聯對映（Object Relational Mapping） 
 即用程式語言去操作資料庫語言  
+
+sqlalchemy 特點：
+* atomicity: 某種程度下只會全成功、全失敗（EX：insert 資料）
+* consistentcy: 資料交易完成前後型別不會受影響
+* durability: 一旦被提交，永久生效
+* isolation: 不同人讀取資料不受影響
+
+db-api and ORM(object-relational mapper)  
+* 可不須用 SQL CODE，但執行效率較低，及無法支援較複雜的查詢
+* 但若直接用 sql code 執行效率較佳
+
+connection pool  
+* engine 包含了建立 pool, dialect，但尚未真的連線，直到 engine.connect()
+* engine 可以限制連線的數量
+* 善用 with 做連線，不需要的時候就會關閉連線
+* remind begin, connect
+
 個人覺得最大的優點就是：  
 1. 如果換資料庫了，程式語言不太需要更動也可以操作
 2. 可以減少資料庫語言的撰寫
