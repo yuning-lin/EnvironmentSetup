@@ -20,6 +20,7 @@ git clone ssh -b branch_name|在本機端，將遠端檔案庫的全部檔案複
 git checkout branch_name|切換分支
 git checkout -b branch_name|直接建立及切換分支
 git checkout -t -b <local_branch_name> <origin / remote_branch_name>|將遠端分支拉下來並建立分支（create branch (-b) 和 upstream track (-t)）
+git checkout --track origin/remote_branch_name|將遠端分支拉下來並建立分支
 git checkout file_name|將修改到一半的檔案還原到上次commit的狀態
 git checkout -- .|還原所有 tracked unstaged files
 git checkout HEAD^ filename|回到前一個版本
