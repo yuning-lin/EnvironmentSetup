@@ -212,7 +212,7 @@
     ```
     
 ## 參考資源
-* [Docs：Writing your first Django app, part 1](https://docs.djangoproject.com/en/1.8/intro/tutorial01/)
+* [Docs：Writing your first Django app, part 1](https://docs.djangoproject.com/en/4.1/intro/tutorial01/)
 * [Docs：The Django Book](https://django-book.readthedocs.io/en/latest/)
 * [Blog：程式語言的框架](https://docs.f5ezcode.in/cs-basic/di-ba-zhang-gong-cheng-de-gong-ju/8.2-cheng-shi-yan-de-kuang-jia)
 * [Blog：Django 介紹](https://djangogirlstaipei.gitbooks.io/django-girls-taipei-tutorial/content/django/introduction.html)
