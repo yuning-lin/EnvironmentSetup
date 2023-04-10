@@ -80,12 +80,25 @@ select k1, k2, SUM(qty) as [qty_by_key], SUM(SUM(qty)) OVER () as [total_qty], S
 from tb
 group by k1, k2
 ```
-### 計算各群組比例
+### 計算以 k1 為群組、k2 的比例
 ```sql
-select k1, k2, SUM(qty) as [qty_by_key], SUM(SUM(qty)) OVER (k1) as [total_qty], SUM(qty) / SUM(SUM(qty)) OVER (k1) AS [ratio]
+select k1, k2, SUM(qty) as [qty_by_key], SUM(SUM(qty)) OVER (PARTITION BY k1) as [total_qty], SUM(qty) / SUM(SUM(qty)) OVER (PARTITION BY k1) AS [ratio]
 from tb
 group by k1, k2
 ```
+### k1 每一組都插入一筆「k2='AAA', qty_by_key=0」的資料
+```sql
+SELECT k1, k2, SUM(qty) as [qty_by_key]
+FROM tb
+WHERE add_date between '2023-01-01' and '2023-03-31'
+GROUP BY k1, k2,
+UNION ALL
+SELECT k1, 'AAA', SUM(0) as [qty_by_key]
+FROM tb
+WHERE add_date between '2023-01-01' and '2023-03-31'
+GROUP BY k1
+```
+
 ### 篩選各群組前幾名
 * ROW_NUMBER() 一定要搭配 over 使用
 * ROW_NUMBER() 僅能在 select, order by 出現
