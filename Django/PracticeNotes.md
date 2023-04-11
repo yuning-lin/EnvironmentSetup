@@ -50,6 +50,30 @@ obj, created = UserData.objects.update_or_create(
 if created:
     obj.update(**new_values)
 ```
+
+## argparse
+* mycommand.py
+```python
+import argparse
+from django.core.management.base import BaseCommand
+
+class Command(BaseCommand):
+    help = 'My custom command'
+
+    def add_arguments(self, parser):
+        parser.add_argument('-m', '--message', type=str, help='A custom message')
+
+    def handle(self, *args, **options):
+        message = options.get('message')
+        if message:
+            print(message)
+        else:
+            print('No message specified')
+
+```
+* CMD：`python manage.py mycommand --message "Hello, world!"`
+
 參考資源
 * [Doc：QuerySet API reference](https://docs.djangoproject.com/en/dev/ref/models/querysets/#get)
 * [ithelp：Models & Admin](https://ithelp.ithome.com.tw/articles/10201074)
+* [How to Create Custom Django Management Commands](https://simpleisbetterthancomplex.com/tutorial/2018/08/27/how-to-create-custom-django-management-commands.html)
