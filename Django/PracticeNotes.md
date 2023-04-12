@@ -51,7 +51,7 @@ if created:
     obj.update(**new_values)
 ```
 
-## argparse
+## Customized Commands Management（argparse）
 * mycommand.py
 ```python
 import argparse
@@ -76,4 +76,5 @@ class Command(BaseCommand):
 參考資源
 * [Doc：QuerySet API reference](https://docs.djangoproject.com/en/dev/ref/models/querysets/#get)
 * [ithelp：Models & Admin](https://ithelp.ithome.com.tw/articles/10201074)
-* [How to Create Custom Django Management Commands](https://simpleisbetterthancomplex.com/tutorial/2018/08/27/how-to-create-custom-django-management-commands.html)
+* [Blog：How to Create Custom Django Management Commands](https://simpleisbetterthancomplex.com/tutorial/2018/08/27/how-to-create-custom-django-management-commands.html)
+* [ithelp：Repository 設計模式(Python)](https://ithelp.ithome.com.tw/articles/10282153?sc=iThomeR)
