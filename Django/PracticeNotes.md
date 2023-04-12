@@ -127,6 +127,8 @@ python3 manage.py migrate test_app --database otherdb
 
 參考資源
 * [Doc：QuerySet API reference](https://docs.djangoproject.com/en/dev/ref/models/querysets/#get)
+* [Doc：Multiple databases](https://docs.djangoproject.com/en/3.0/topics/db/multi-db/#database-routers)
 * [ithelp：Models & Admin](https://ithelp.ithome.com.tw/articles/10201074)
-* [Blog：How to Create Custom Django Management Commands](https://simpleisbetterthancomplex.com/tutorial/2018/08/27/how-to-create-custom-django-management-commands.html)
 * [ithelp：Repository 設計模式(Python)](https://ithelp.ithome.com.tw/articles/10282153?sc=iThomeR)
+* [Blog：How to Create Custom Django Management Commands](https://simpleisbetterthancomplex.com/tutorial/2018/08/27/how-to-create-custom-django-management-commands.html)
+
