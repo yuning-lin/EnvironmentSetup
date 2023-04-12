@@ -125,6 +125,20 @@ python3 manage.py migrate test_app --database default
 python3 manage.py migrate test_app --database otherdb
 ```
 
+## Sorting Data From Model
+* 法一：（負號表：descending）
+```python
+class ModelA(models.Model):
+    ...
+    class Meta:
+        ...
+        ordering = ["column1", "-column2"]
+```
+* 法二：
+```python
+MyModel.objects.all().order_by("column1", "-column2")
+```
+
 參考資源
 * [Doc：QuerySet API reference](https://docs.djangoproject.com/en/dev/ref/models/querysets/#get)
 * [Doc：Multiple databases](https://docs.djangoproject.com/en/3.0/topics/db/multi-db/#database-routers)
