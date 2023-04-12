@@ -73,6 +73,58 @@ class Command(BaseCommand):
 ```
 * CMD：`python manage.py mycommand --message "Hello, world!"`
 
+## Multiple Database
+* test_app/models.py
+```python
+class ModelA(models.Model):
+    class params:
+        db = 'default'
+
+class ModelB(models.Model):
+    class params:
+        db = 'otherdb'
+    ...
+```
+
+* test_app/dbrouters.py
+```python
+import test_app.models
+allmodels = dict([(name.lower(), cls) for name, cls in test_app.models.__dict__.items() if isinstance(cls, type)])
+...
+class MyDBRouter(object):
+
+    def db_for_read(self, model, **hints):
+        """ reading model based on params """
+        return getattr(model.params, 'db')
+
+    def db_for_write(self, model, **hints):
+        """ writing model based on params """
+        return getattr(model.params, 'db')
+
+    def allow_migrate(self, db, app_label, model_name = None, **hints):
+        """ migrate to appropriate database per model """
+        model = allmodels.get(model_name)
+        return(model.params.db == db)
+```
+* test_app/settings.py
+```python
+DATABASE_ROUTERS = ('test_app.dbrouters.MyDBRouter',)
+...
+DATABASES = {
+    'default': {
+        ....
+    }
+    'otherdb': {
+        ....
+    }
+}
+```
+* CMD
+```linux
+python3 manage.py migrate test_app --database default
+python3 manage.py migrate test_app --database otherdb
+```
+
 參考資源
 * [Doc：QuerySet API reference](https://docs.djangoproject.com/en/dev/ref/models/querysets/#get)
 * [ithelp：Models & Admin](https://ithelp.ithome.com.tw/articles/10201074)
