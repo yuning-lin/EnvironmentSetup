@@ -176,6 +176,23 @@
         },
     }
     ```
+    * MSSQL：（ODBC Driver 版本為 18，[載點](https://learn.microsoft.com/zh-tw/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-ver16)）
+    ```python
+    DATABASES = {
+        "default": {
+            "ENGINE": "mssql",
+            "NAME": "DATABASE_NAME",
+            "USER": "USER_NAME",
+            "PASSWORD": "PASSWORD",
+            "HOST": "HOST_ADDRESS",
+            "PORT": "1433",
+            "OPTIONS": {
+                "driver": "ODBC Driver 18 for SQL Server",
+                "extra_params": "Encrypt=no",
+            },
+        },
+    }
+    ```
 3. 修改 templates 路徑
     * 預設：
     ```python
