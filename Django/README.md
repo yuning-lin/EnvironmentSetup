@@ -134,7 +134,7 @@
   {{<變數名稱>|<filter功能>:<filter參數>}}
   ```
 ## 修改設定（EX：HelloWorld/settings.py）
-1. 修改語言、時區，[時區相關問題](https://www.cnblogs.com/bubu99/p/14774503.html)
+1. 修改語言、時區
     * 預設：
     ```python
     LANGUAGE_CODE = 'en-us'
@@ -147,7 +147,10 @@
 
     TIME_ZONE = 'Asia/Taipei'
     ```
-
+    * 參考資料：
+        * [Blog：時區相關問題](https://www.cnblogs.com/bubu99/p/14774503.html)
+        * [Stackoverflow：存取時區](https://stackoverflow.com/questions/29311354/how-to-set-the-timezone-in-django)
+      
 2. 修改 Database 設定
     * 預設：
     ```python
