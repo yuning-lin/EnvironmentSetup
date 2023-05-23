@@ -33,6 +33,7 @@
 * 更換換行符號：Window > Preferences > General > Workspace > New text file line delimiter 勾選 Linux or Windows
    * Windows 換行符號：CRLF
    * Linux 換行符號：LF
+* 一鍵復原所有視窗設定：Window > Perspective > Reset Perspective...
 
 ## 改變主題背景
 * 簡易更換：General > 點選 Appearence > Theme 選 `Dark`
