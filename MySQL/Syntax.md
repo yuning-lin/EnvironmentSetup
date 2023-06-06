@@ -69,3 +69,13 @@ From country_table A inner join city_table B
 on A.country_id = B.country_id;
 ```
 
+### rollback vs commit
+* 先執行可以反悔的 transaction
+```sql
+begin transaction
+
+update tb
+set data_time = '2023/06/05 17:08:00', status = 'O'
+where id = '001'
+```
+* 確認完資料狀態後，可以決定要執行 rollback（復原）或 commit（提交）
