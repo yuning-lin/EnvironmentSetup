@@ -61,6 +61,7 @@
 `tmux new -s session_name`|創建一個新的 session_name 
 `tmux a -t session_name`|追蹤該 session_name 運行狀況
 `tmux set mouse on`|設定可以滑鼠滾動
+`tmux -S /tmp/tmux-apuser/project_folder attach`|進入別帳號啟的 tmux
 
 鍵盤輸入|意義
 ----|----
