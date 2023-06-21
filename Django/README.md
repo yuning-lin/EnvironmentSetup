@@ -236,6 +236,7 @@
         * [Package logginf 官方文件](https://docs.python.org/3/library/logging.html#logrecord-attributes)
     * 客製可參考：[Blog：Django 中 的 logging](https://note.qidong.name/2018/11/django-logging/)
     * 遇到重複紀錄 log 文字的情形可參考：[stackoverflow：Duplicate log output when using Django logging module](https://stackoverflow.com/questions/62882552/duplicate-log-output-when-using-django-logging-module)
+    * 想定期刪資料 log 的設定可參考：[stackoverflow：Automatically delete logs in Django](https://stackoverflow.com/questions/64412211/automatically-delete-logs-in-django)
     * 範例：
        ```python
         LOGGING = {
