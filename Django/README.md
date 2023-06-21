@@ -230,7 +230,54 @@
         },
     ]
     ```
-    
+4. 修改 log 內容
+    * 預設可參考：
+        * [Django logging 官方文件](https://docs.djangoproject.com/en/4.2/topics/logging/)
+        * [Package logginf 官方文件](https://docs.python.org/3/library/logging.html#logrecord-attributes)
+    * 客製可參考：[Blog：Django 中 的 logging](https://note.qidong.name/2018/11/django-logging/)
+    * 遇到重複紀錄 log 文字的情形可參考：[stackoverflow：Duplicate log output when using Django logging module](https://stackoverflow.com/questions/62882552/duplicate-log-output-when-using-django-logging-module)
+    * 範例：
+       ```python
+        LOGGING = {
+            "version": 1,
+            "disable_existing_loggers": False,
+            "formatters": { # 紀錄 log 的時間、檔名等提示字
+                "simple": {
+                    "format": "[%(asctime)s][%(levelname)s][%(name)s] %(message)s",
+                    "datefmt": "%Y-%m-%d %H:%M:%S",
+                },
+            },
+            "handlers": {
+                "console": {
+                    "class": "logging.StreamHandler",
+                    "formatter": "simple",
+                },
+                "file": {
+                    "level": "INFO",
+                    "class": "logging.handlers.TimedRotatingFileHandler",  # 定期刪除 log
+                    "filename": f"{BASE_DIR}/log/file.log",
+                    "when": "D",  # 以天為單位
+                    "interval": 7,  # 七天刪一次
+                    "backupCount": 7,  # keep a 7 day history before log deletion
+                    "formatter": "simple",
+                },
+            },
+            "loggers": {
+                "django": {
+                    "handlers": ["console", "file"],
+                    "level": "INFO",
+                    "propagate": False,  # 避免重複 log 訊息
+                },
+                "greeting": {
+                    "handlers": ["console", "file"],
+                    "level": "DEBUG",
+                    "level": "INFO",
+                    "propagate": False,  # 避免重複 log 訊息
+                },
+            },
+        }
+
+       ```
 ## 參考資源
 * [Docs：Writing your first Django app, part 1](https://docs.djangoproject.com/en/4.1/intro/tutorial01/)
 * [Docs：The Django Book](https://django-book.readthedocs.io/en/latest/)
