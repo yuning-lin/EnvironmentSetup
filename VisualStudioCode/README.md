@@ -14,3 +14,6 @@
 
 * 以 GitHub Copilot Labs 為例：
   1. 安裝：點選左列 extensions > search bar：GitHub Copilot Labs > install
+  2. 申請帳號：[前往](https://docs.github.com/en/copilot/quickstart#signing-up-for-github-copilot)按照指示進行註冊才能使用
+  3. VS CODE IDE 右下角 Account 或 Manage 會有未完成的步驟，點選以完成
+  4. 完成後左列工具欄最後一個會出現 GitHub Copilot Labs：將欲翻譯的程式進行框選並選擇要翻譯的語言即可進行翻譯的動作
