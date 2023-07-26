@@ -10,10 +10,19 @@ django.setup() # 先於 import test_app.models
 
 from test_app.models import ClassA
 ```
+* `ModuleNotFoundError: No module named 'your_project_name.settings'`
+```python
+# Example (Unix Bash shell):
+export DJANGO_SETTINGS_MODULE=mysite.settings
+
+# Example (Windows shell):
+set DJANGO_SETTINGS_MODULE=mysite.settings
+```
+
 
 參考資源
 * [Video：Setting up Django Development in Eclipse with Code Complete and Graphical Debugging](https://vimeo.com/5027645)
-
+* [Doc：Django settings¶](https://django.readthedocs.io/en/stable/topics/settings.html)
 
 ## 聚合
 概念  
