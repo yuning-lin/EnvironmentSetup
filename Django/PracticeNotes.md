@@ -24,6 +24,9 @@ set DJANGO_SETTINGS_MODULE=mysite.settings
 * [Video：Setting up Django Development in Eclipse with Code Complete and Graphical Debugging](https://vimeo.com/5027645)
 * [Doc：Django settings¶](https://django.readthedocs.io/en/stable/topics/settings.html)
 
+## 常見問題
+* 跑沒有返回任何錯誤：可藉由 `python manage.py makemigrations` 的錯誤訊息查找
+
 ## 聚合
 概念  
 * aggregate：返回聚合值
