@@ -11,7 +11,7 @@
 `touch file_name.txt`|創建 file_name.txt
 `find . -name file_name.txt`|尋找當前目錄底下名為 file_name.txt 的檔案
 `rm file_name.txt`|刪除 file_name.txt
-`rm -r -f directory_name`|刪除資料夾 directory_name 
+`rm -r -f directory_name`|刪除資料夾 directory_name（-r → recursively、-f → force）
 `mv file_name.txt src`|移動 file_name.txt 於 src 下
 `cp file_name.txt src`|複製 file_name.txt 於 src 下
 `cp file_name.txt file_name2.txt`|於當前資料夾下複製 file_name.txt 並命名為 file_name2.txt
