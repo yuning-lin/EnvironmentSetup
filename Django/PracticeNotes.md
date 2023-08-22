@@ -26,15 +26,14 @@ set DJANGO_SETTINGS_MODULE=mysite.settings
 
 ## 常見問題
 * 跑沒有返回任何錯誤：可藉由 `python manage.py makemigrations` 的錯誤訊息查找
-* log 在 settings.py 設定完了卻沒有實際寫入：
-    * 執行主檔需加入：
-      ```python
-      import os
-      import django
-      
-      os.environ.setdefault("DJANGO_SETTINGS_MODULE", "project_name.settings")
-      django.setup()
-      ```
+* log 在 settings.py 設定完了卻沒有實際寫入：在執行主檔加入以下程式  
+   ```python
+   import os
+   import django
+   
+   os.environ.setdefault("DJANGO_SETTINGS_MODULE", "project_name.settings")
+   django.setup()
+   ```
 
 ## 聚合
 概念  
