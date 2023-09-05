@@ -65,9 +65,11 @@
 `tmux set mouse on`|設定可以滑鼠滾動
 `tmux -S /tmp/tmux-apuser/project_folder attach`|進入別帳號啟的 tmux
 
-鍵盤輸入|意義
+鍵盤按鍵|意義
 ----|----
 crtl + B 放開再按 D | 跳出 tmux
+crtl + B 放開再按 " (shift+') | 分割成上下視窗
+crtl + B 放開再按 % (shift+5) | 分割成左右視窗
 crtl + B 放開再按 上下左右鍵 | 切換視窗（綠色底線表示當前視窗）
 
 
