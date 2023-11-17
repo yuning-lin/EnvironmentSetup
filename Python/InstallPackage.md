@@ -13,6 +13,7 @@
 強制降級套件版本|`pip install --force-reinstall wheel==0.34.1`
 升級套件|`pip install --upgrade wheel`
 卸載套件|`pip uninstall wheel`
+確認套件是否有安裝|`pip show wheel`
 列出所有套件及版本|`pip list`
 將套件打包成文件|`pip freeze > 文件名（如 requirements.txt）`
 打包成文件的套件一次安裝|`pip install -r requirements.txt`
