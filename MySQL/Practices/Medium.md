@@ -143,4 +143,13 @@ PIVOT
   FOR Col1 IN ([0], [1], [2], [3], [4])  
 ) AS PivotTable; 
 ```
-
+### 條件判斷
+```sql
+select   
+    case   
+        when age>=12 and age<24 then 'g1'  
+        when age>=24 and age<36 then 'g2'  
+        when age>=36 then 'g3'  
+    end as age_group  
+from table1
+```
