@@ -20,6 +20,7 @@
 `curl -O https://s3-ap-northeast-1.amazonaws.com/sqlite-demo-data/gapminder.csv`|下載該網站之 gapminder.csv
 `sudo apt-get install vim`| 讓一般用戶得以用系統管理員的身分執行 vim 套件的安裝（sudo：仿管理員身分、apt-get：套件管理工具）
 `lsof -i -P -n \| grep :80`|查看 80 port 是否有被佔用，[詳參](https://www.ltsplus.com/linux/3-way-check-linux-listen-port)
+`lsof -i :80`|查看 80 port 是否有被佔用
 
 
 ## VM 工作執行相關用法
@@ -31,7 +32,8 @@
 `nohup python3 app.py &`|在背景用 python3 執行 app.py（nohup：不斷地執行、&：在背景執行）
 `ps aux \| grep A`|列出執行中名字有 A 的 process（a：顯示所有 process、u：以用戶為主的格式来顯示、x：不以終端機區分）
 `ps aux \| grep app.py`|列出執行命令中名字有 app.py 的 process
-`kill process_id`|關掉指定 process_id 的 process
+`kill PID`|關掉指定 PID 的 process
+`kill -9 PID`|關掉指定 PID 的 process
 `netstat -ap\|grep port_num`|檢視佔用此 port_num 的 process
 
 ## crontab 工作排程相關指令
