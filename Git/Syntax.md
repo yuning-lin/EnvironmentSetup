@@ -49,10 +49,11 @@ git stash pop|讀取最新一次保存內容並恢復
 git stash list|列出所有備份
 git stash clear|清空備份
 git reset --hard <commit-hash-value> |回復到遠端節點
-git reset <commit-hash-value> filename|此檔案回復到該 commit 的狀態
+git reset commit-hash-value filename|此檔案回復到該 commit 的狀態
 git reset --hard origin/remote_branch|若有無法更新遠端分支的情況，可以先 git fetch --prune 再執行此行
 git remote update --prune|等同 git fetch --all，更新所有遠端分支（--prune 把原本刪除的 remote branch 刪除）
-git revert <commit-hash-value>|還原成此 commit 前一個狀態
+git revert commit-hash-value|還原成此 commit 前一個狀態
+git revert HEAD --no-edit|取消最後一個 commit 且不編輯 message
 git submodule update --init --recursive|更新 submodule
 git config --get remote.origin.url|秀出遠端網址
 git ls-files|秀出當前資料夾下有被 git 管理的檔案
