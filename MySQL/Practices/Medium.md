@@ -153,3 +153,9 @@ select
     end as age_group  
 from table1
 ```
+### 分組排名
+* 每個班級按照成績排名
+```sql
+SELECT RANK() OVER(PARTITION BY class ORDER BY score DESC) AS Rank, name, score, class  
+FROM students;
+```
