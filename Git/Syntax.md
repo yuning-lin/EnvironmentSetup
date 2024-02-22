@@ -39,7 +39,8 @@ git push remote_branch local_branch|將當前分支推向指定遠端分支（�
 git push origin --delete remote_branch|刪除遠端分支
 git mv oldfolder/ newfolder/|將資料夾做搬遷
 git mv oldfolder newfolder|變更資料夾名、檔名
-git rm -r –cached folder_name|移除資料夾 git管理
+git rm -r –cached folder_name|移除資料夾 git 管理，移除後要記得 commit
+git rm -r –cached file_name|移除檔案 git 管理，移除後要記得 commit
 git diff|秀出修改不同之處
 git diff <commit-hash-value>|秀出和該 commit 不同之處
 git stash|僅備份暫存區檔案
