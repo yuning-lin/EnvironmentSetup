@@ -19,6 +19,30 @@ export DJANGO_SETTINGS_MODULE=mysite.settings
 set DJANGO_SETTINGS_MODULE=mysite.settings
 ```
 
+## URL 捕獲器
+在 django_prj/django_prj/urls.py
+一般設置如下方範例，捕獲 URL 的方式有二：
+* path：較新版本 Django 才出現的 function，可以使用尖括號來捕獲 URL 中的值
+   * 其他常見的型別有：
+      * `<int:variable>`：捕獲正整數。
+      * `<str:variable>`：捕獲除了路徑分隔符（'/'）以外的任何字符串。
+      * `<slug:variable>`：捕獲由 ASCII 字母或數字以及連字符或下劃線組成的字符串。
+      * `<uuid:variable>`：捕獲格式化為UUID的字符串。
+      * `<path:variable>`：捕獲任何非空字符串，包括路徑分隔符。
+* re_path：較舊版本 Django 就有的 function，利用正則表達式捕獲 URL 中的值
+```python
+from django.contrib import admin
+from django.urls import path, re_path
+
+from appA.views import funcA
+from appB.views import funcB
+
+urlpatterns = [
+    path("admin/", admin.site.urls),
+    re_path("^api/appA/(?P<year>[0-9]{4})/$", funcA),
+    path("api/appB/<int:year>/", funcB),
+]
+```
 
 參考資源
 * [Video：Setting up Django Development in Eclipse with Code Complete and Graphical Debugging](https://vimeo.com/5027645)
