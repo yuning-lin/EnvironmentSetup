@@ -19,8 +19,12 @@ export DJANGO_SETTINGS_MODULE=mysite.settings
 set DJANGO_SETTINGS_MODULE=mysite.settings
 ```
 
+參考資源
+* [Video：Setting up Django Development in Eclipse with Code Complete and Graphical Debugging](https://vimeo.com/5027645)
+* [Doc：Django settings¶](https://django.readthedocs.io/en/stable/topics/settings.html)
+
+
 ## URL 捕獲器
-在 django_prj/django_prj/urls.py
 一般設置如下方範例，捕獲 URL 的方式有二：
 * path：較新版本 Django 才出現的 function，可以使用尖括號來捕獲 URL 中的值
    * 其他常見的型別有：
@@ -30,6 +34,9 @@ set DJANGO_SETTINGS_MODULE=mysite.settings
       * `<uuid:variable>`：捕獲格式化為UUID的字符串。
       * `<path:variable>`：捕獲任何非空字符串，包括路徑分隔符。
 * re_path：較舊版本 Django 就有的 function，利用正則表達式捕獲 URL 中的值
+* 注意：不論使用 path 或 re_path，最後一定要有 "/" 結尾，才不會有 404 的錯誤
+  
+django_prj/django_prj/urls.py 範例：  
 ```python
 from django.contrib import admin
 from django.urls import path, re_path
@@ -43,10 +50,25 @@ urlpatterns = [
     path("api/appB/<int:year>/", funcB),
 ]
 ```
+  
+以上捕獲器對應的 django_prj/appB/views.py 撰寫範例：  
+```python
+import os
 
-參考資源
-* [Video：Setting up Django Development in Eclipse with Code Complete and Graphical Debugging](https://vimeo.com/5027645)
-* [Doc：Django settings¶](https://django.readthedocs.io/en/stable/topics/settings.html)
+import django
+from django.http import JsonResponse
+
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "django_prj.settings")
+django.setup()
+
+from appB import Article
+def funcA(request, year):
+
+    article = Article(year)
+    article.main()
+
+    return JsonResponse(article.return_msg)
+```
 
 ## 常見問題
 * 跑沒有返回任何錯誤：可藉由 `python manage.py makemigrations` 的錯誤訊息查找
