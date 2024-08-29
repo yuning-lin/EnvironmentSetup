@@ -15,6 +15,16 @@
     * Port: 填寫 SSH 端口（通常是 22）。
     * Extra: 如果使用 SSH 密鑰認證，可以在此填寫密鑰文件路徑等額外參數。
 
+#### python 套件
+```python
+pip install apache-airflow==2.6.2
+pip install apache-airflow-providers-ssh==3.7.0 # for SSHOperator
+```
+
+#### python 錯誤訊息解法
+* 錯誤訊息：`airflow.exceptions.AirflowException: SSH command timed out`
+* 將 cmd_timeout 指定一段比連接執行還長的時間或指定為 None 
+
 #### python 實作
 ```python
 from datetime import datetime, timedelta
@@ -53,5 +63,4 @@ with DAG(
     Project_End = EmptyOperator(task_id="Project_End")
 
     Project_Start >> Process >> Project_End
-
 ```
