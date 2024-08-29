@@ -6,17 +6,17 @@
 1. 登錄 Airflow 的 Web UI 界面
 2. 點選頂部選單的 Admin > 點選 Connections
 3. 點選加號（Add a new record）
-    * Conn Id: 自行命名，是後續在 SSHOperator 會使用到的 ssh_conn_id，EX：server_b。
-    * Conn Type: 選擇 SSH。
-    * Host: 填寫 B 機台的 IP 地址或主機名。
-    * Schema: 可以留空。
-    * Login: 填寫登錄 B 機台所需的用户名。
-    * Password: 填寫登錄 B 機台所需的密碼。
-    * Port: 填寫 SSH 端口（通常是 22）。
-    * Extra: 如果使用 SSH 密鑰認證，可以在此填寫密鑰文件路徑等額外參數。
+    * Conn Id：自行命名，是後續在 SSHOperator 會使用到的 ssh_conn_id，EX：server_b。
+    * Conn Type：選擇 SSH。
+    * Host：填寫 B 機台的 IP 地址或主機名。
+    * Schema：可以留空。
+    * Login：填寫登錄 B 機台所需的用户名。
+    * Password：填寫登錄 B 機台所需的密碼。
+    * Port：填寫 SSH 端口（通常是 22）。
+    * Extra：如果使用 SSH 密鑰認證，可以在此填寫密鑰文件路徑等額外參數。
 
 #### python 套件
-```python
+```bash
 pip install apache-airflow==2.6.2
 pip install apache-airflow-providers-ssh==3.7.0 # for SSHOperator
 ```
