@@ -28,6 +28,7 @@ pip install apache-airflow-providers-ssh==3.7.0 # for SSHOperator
 #### python 實作
 ```python
 from datetime import datetime, timedelta
+import pendulum
 
 from airflow import DAG
 from airflow.operators.empty import EmptyOperator
@@ -38,7 +39,7 @@ default_args = {
     "depends_on_past": False,
     "email": ["your_name@gmail.com"],
     "email_on_failure": True,
-    "start_date": datetime(2024, 8, 28),
+    "start_date": datetime(2024, 8, 28, tzinfo=pendulum.timezone("Asia/Taipei")), # 設定時區
     "retries": 1,
     "retry_delay": timedelta(minutes=5),
 }
