@@ -25,3 +25,11 @@
   git reset config.py
   git checkout config.py
   ```
+
+* 若有遇到專案套件新舊版本有兩套想整合時，相同套件不同版本以舊版為準的方法：
+  ```python
+  # 將舊有的虛擬環境先存成 current_requirements.txt
+  pip freeze > current_requirements.txt
+  # 將舊有版本當作限制項 current_requirements.txt
+  pip install -r requirements.txt --constraint current_requirements.txt
+  ```
