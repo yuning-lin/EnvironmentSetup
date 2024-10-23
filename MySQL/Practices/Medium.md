@@ -159,3 +159,8 @@ from table1
 SELECT RANK() OVER(PARTITION BY class ORDER BY score DESC) AS Rank, name, score, class  
 FROM students;
 ```
+### 單行差分
+```sql
+SELECT time_col, Value, Value - LAG(Value) OVER (ORDER BY time_col) AS Value_Diff
+FROM your_table_name;
+```
