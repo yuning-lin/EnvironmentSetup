@@ -18,6 +18,18 @@
 * 解除虛擬環境：`deactivate`
 
 ## pyenv
+#### Linux
+1. `curl https://pyenv.run | bash`
+2. `nano .bashrc` -> 將以下程式貼至檔案最後段 -> 存檔
+   ```linux
+    export PYENV_ROOT="$HOME/.pyenv"
+    command -v pyenv >/dev/null || export PATH="PYENVROOT/bin:PYENV_ROOT/bin:PATH"
+    eval "$(pyenv init -)"
+    eval "$(pyenv virtualenv-init -)"
+   ```
+3. `source ~/.bashrc`
+4. [常用語法](https://github.com/yuning-lin/EnvironmentSetup/edit/main/Python/VirtualEnvironment.md#pyenv-%E5%B8%B8%E7%94%A8%E8%AA%9E%E6%B3%95)即可開始創建虛擬環境
+
 #### Windows
 1. 取得 pyenv-win
   
@@ -25,7 +37,7 @@
 |---|---|---|
 |若已經下載過 python|`pip install pyenv-win --target $HOME/.pyenv`|`pip install pyenv-win --target %USERPROFILE%\.pyenv`|
 |使用 Git 取得|`git clone https://github.com/pyenv-win/pyenv-win.git "$HOME/.pyenv"`|`git clone https://github.com/pyenv-win/pyenv-win.git "%USERPROFILE%\.pyenv"`|
-|自行[下載](https://github.com/pyenv-win/pyenv-win/archive/master.zip)安裝|`mkdir $HOME/.pyenv`<br>將下載檔案（pyenv-win-master.zip）解壓縮後<br>複製 pyenv-win 整個資料夾至 `$HOME/.pyenv`|`mkdir %USERPROFILE%\.pyenv`<br>將下載檔案（pyenv-win-master.zip）解壓縮後<br>複製 pyenv-win 整個資料夾至 `%USERPROFILE%\.pyenv`|
+|自行[下載](https://github.com/pyenv-win/pyenv-win/archive/master.zip)安裝|`mkdir HOME/.pyenv`<br>將下載檔案（pyenv-win-master.zip）解壓縮後<br>複製 pyenv-win 整個資料夾至 `HOME/.pyenv`<br>將下載檔案（pyenv-win-master.zip）解壓縮後<br>複製 pyenv-win 整個資料夾至 `HOME/.pyenv`|`mkdir %USERPROFILE%\.pyenv`<br>將下載檔案（pyenv-win-master.zip）解壓縮後<br>複製 pyenv-win 整個資料夾至 `%USERPROFILE%\.pyenv`|
   
 注：
 * PowerShell or Git Bash 下 > 輸入 `$HOME` > 即會跳到該路徑
@@ -39,10 +51,11 @@
 ```
 3. 同樣在 PowerShell 複製以下程式以添加下面路徑至 USER PATH 中，才可以使用 pyenv 的指令
 ```
-[System.Environment]::SetEnvironmentVariable('path', $env:USERPROFILE + "\.pyenv\pyenv-win\bin;" + $env:USERPROFILE + "\.pyenv\pyenv-win\shims;" + [System.Environment]::GetEnvironmentVariable('path', "User"),"User")
+[System.Environment]::SetEnvironmentVariable('path', env:USERPROFILE + "\.pyenv\pyenv-win\bin;" + env:USERPROFILE + "\.pyenv\pyenv-win\bin;" + env:USERPROFILE + "\.pyenv\pyenv-win\shims;" + [System.Environment]::GetEnvironmentVariable('path', "User"),"User")
 ```
 4. 重啟得以開始使用 pyenv
-5. pyenv 常用語法
+
+#### pyenv 常用語法
   
 |意義|語法|
 |---|---|
