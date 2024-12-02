@@ -34,7 +34,7 @@
 
 ## 創建 Django 專案
 1. 建立名為 HelloWorld 的資料夾，並 cd 進入夾下
-2. 終端機：`django-admin startproject HelloWorld .`，在當前資料夾下建立名為的 HelloWorld 專案
+2. 終端機：`django-admin startproject HelloWorld`，在當前資料夾下建立名為的 HelloWorld 專案
 3. 建立檔案架構有 HelloWorld 資料夾及夾下檔案、manage.py，說明如下：
     
     名稱|用途
@@ -52,7 +52,7 @@
   ![](https://github.com/yuning-lin/EnvironmentSetup/blob/main/SetUpPic/django_successfully_installed.PNG)
 
 ## 創建 APP
-1. 終端機：`python manage.py startapp greeting`，建立和 manage.py 同層名為 greeting 的 app
+1. 終端機：`cd HelloWorld/` > `python manage.py startapp greeting`，建立和 manage.py 同層名為 greeting 的 app
 2. greeting 資料夾及夾下檔案說明如下：
     
     名稱|用途
